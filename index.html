@@ -400,7 +400,7 @@ function build() {
   const nav = document.getElementById('chapterNav');
   const views = document.getElementById('chapterViews');
 
-  for (const c of ch) {
+  for (const c of allChapters) {
     if (c.id === 0) continue;
     // Nav
     const a = document.createElement('a');
@@ -440,7 +440,7 @@ function showChapter(id) {
   if (view) view.classList.add('active');
   const link = document.querySelector(`#chapterNav a[data-chapter="${id}"]`);
   if (link) link.classList.add('active');
-  const cc = ch.find(c => c.id === id);
+  const cc = allChapters.find(c => c.id === id);
   document.getElementById('breadcrumbChapter').textContent = cc ? `— ${cc.ft}` : '';
   closeSidebar();
 }
