@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Taysīr al-ʿAzīz al-Ḥamīd — Explication de Kitāb al-Tawḥīd par Sulaymān ibn ʿAbdillāh. Site gratuit pour la propagation du Tawḥīd.">
+<meta name="description" content="Taysīr al-ʿAzīz al-Ḥamīd — Explication complète de Kitāb al-Tawḥīd par Sulaymān ibn ʿAbdillāh ibn Muḥammad ibn ʿAbd al-Wahhāb. Les 66 chapitres avec preuves en arabe et français. Site gratuit pour la propagation du Tawḥīd.">
 <title>Taysīr al-ʿAzīz al-Ḥamīd — تيسير العزيز الحميد</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -27,67 +27,66 @@ body{font-family:'Inter',sans-serif;background:#f8f6f0;color:#1a1a2e;overflow-x:
 .sidebar{position:fixed;top:0;left:0;width:300px;height:100vh;background:linear-gradient(180deg,#0a2a54,#030d1f);color:#fff;z-index:100;overflow-y:auto;transition:transform .3s ease}
 .sidebar::-webkit-scrollbar{width:4px}
 .sidebar::-webkit-scrollbar-thumb{background:rgba(245,200,71,.3);border-radius:2px}
-.sidebar .logo{padding:24px 20px;border-bottom:1px solid rgba(255,255,255,.08)}
-.sidebar .logo h1{font-size:1.1rem;font-weight:700;color:#f5c847;margin-bottom:2px}
-.sidebar .logo p{font-size:.7rem;color:rgba(255,255,255,.5)}
-.sidebar .logo .ar-logo{font-family:'Amiri',serif;font-size:.9rem;color:rgba(255,255,255,.4);margin-top:4px}
-.sidebar nav{padding:12px 0}
-.sidebar nav a{display:flex;align-items:center;gap:10px;padding:10px 20px;color:rgba(255,255,255,.6);font-size:.82rem;text-decoration:none;transition:all .2s;border-left:3px solid transparent;cursor:pointer}
+.sidebar .logo{padding:20px 18px;border-bottom:1px solid rgba(255,255,255,.08)}
+.sidebar .logo h1{font-size:1rem;font-weight:700;color:#f5c847;margin-bottom:2px}
+.sidebar .logo p{font-size:.65rem;color:rgba(255,255,255,.5)}
+.sidebar .logo .ar-logo{font-family:'Amiri',serif;font-size:.8rem;color:rgba(255,255,255,.35);margin-top:3px}
+.sidebar nav{padding:8px 0}
+.sidebar nav a{display:flex;align-items:flex-start;gap:8px;padding:7px 16px;color:rgba(255,255,255,.55);font-size:.75rem;text-decoration:none;transition:all .2s;border-left:3px solid transparent;cursor:pointer;line-height:1.3}
 .sidebar nav a:hover{color:#fff;background:rgba(255,255,255,.04)}
 .sidebar nav a.active{color:#f5c847;border-left-color:#f5c847;background:rgba(245,200,71,.06)}
-.sidebar nav a .num{font-size:.7rem;color:rgba(255,255,255,.3);min-width:24px;font-weight:600}
-.sidebar nav a .ar{font-family:'Amiri',serif;font-size:.7rem;direction:rtl;display:block;color:rgba(255,255,255,.35);margin-top:1px}
+.sidebar nav a .num{font-size:.65rem;color:rgba(255,255,255,.3);min-width:20px;font-weight:600;flex-shrink:0;margin-top:1px}
+.sidebar nav a .ar{font-family:'Amiri',serif;font-size:.65rem;direction:rtl;display:block;color:rgba(255,255,255,.3);margin-top:1px;line-height:1.2}
 .main-content{margin-left:300px;min-height:100vh;padding:0}
-.header-bar{background:#fff;border-bottom:1px solid #e5e7eb;padding:16px 32px;position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:16px}
-.header-bar .hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;color:#1a1a2e}
-.header-bar .hamburger svg{width:24px;height:24px}
-.header-bar .breadcrumb{font-size:.85rem;color:#6b7280}
+.header-bar{background:#fff;border-bottom:1px solid #e5e7eb;padding:12px 28px;position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:12px}
+.header-bar .hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;color:#1a1a2e;font-size:1.4rem}
+.header-bar .breadcrumb{font-size:.8rem;color:#6b7280}
 .header-bar .breadcrumb span{color:#0a2a54;font-weight:600}
-.chapter-view{display:none;max-width:900px;margin:0 auto;padding:40px 32px 80px}
+.chapter-view{display:none;max-width:900px;margin:0 auto;padding:32px 28px 60px}
 .chapter-view.active{display:block;animation:fadeIn .35s ease}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.chapter-header{margin-bottom:32px;padding-bottom:24px;border-bottom:2px solid #e5e7eb}
-.chapter-header .chapter-num{font-family:'Amiri',serif;direction:rtl;font-size:1.1rem;color:#9ca3af;margin-bottom:4px}
-.chapter-header h2{font-size:1.5rem;font-weight:700;color:#0a2a54;margin-bottom:6px;line-height:1.3}
-.chapter-header .ar-title{font-family:'Amiri',serif;font-size:1.3rem;direction:rtl;color:#6b7280;margin-top:6px}
-.chapter-summary{background:#fff;border-radius:12px;padding:24px;margin-bottom:28px;box-shadow:0 1px 4px rgba(0,0,0,.04);border:1px solid #e5e7eb;line-height:1.7;color:#374151;font-size:.95rem}
-.section-label{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#6b7280;margin-bottom:12px;padding:4px 10px;background:#f3f4f6;border-radius:6px}
-.verse-card{background:linear-gradient(135deg,#f0f5ff,#e8edf5);border-radius:10px;padding:20px;margin-bottom:16px;border:1px solid #dbeafe}
-.verse-card .arabic{font-size:1.2rem;color:#0a2a54;margin-bottom:10px;line-height:2}
-.verse-card .translation{font-size:.9rem;color:#374151;line-height:1.6}
-.verse-card .ref{font-size:.8rem;color:#6b7280;margin-top:8px;font-style:italic}
-.hadith-card{background:#fff;border-radius:10px;padding:20px;margin-bottom:16px;border:1px solid #e5e7eb;border-left:3px solid #f5c847}
-.hadith-card .arabic{font-size:1.1rem;color:#1a1a2e;margin-bottom:10px;line-height:2}
-.hadith-card .translation{font-size:.9rem;color:#374151;line-height:1.6}
-.hadith-card .ref{font-size:.8rem;color:#6b7280;margin-top:6px;font-style:italic}
-.evidence-section{margin-bottom:28px}
-.content-section{margin-bottom:28px}
+.chapter-header{margin-bottom:24px;padding-bottom:20px;border-bottom:2px solid #e5e7eb}
+.chapter-header .chapter-num{font-family:'Amiri',serif;direction:rtl;font-size:1rem;color:#9ca3af;margin-bottom:4px}
+.chapter-header h2{font-size:1.3rem;font-weight:700;color:#0a2a54;margin-bottom:4px;line-height:1.3}
+.chapter-header .ar-title{font-family:'Amiri',serif;font-size:1.15rem;direction:rtl;color:#6b7280;margin-top:4px}
+.chapter-summary{background:#fff;border-radius:10px;padding:20px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.04);border:1px solid #e5e7eb;line-height:1.7;color:#374151;font-size:.9rem}
+.section-label{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#6b7280;margin-bottom:10px;padding:3px 8px;background:#f3f4f6;border-radius:5px}
+.verse-card{background:linear-gradient(135deg,#f0f5ff,#e8edf5);border-radius:8px;padding:16px;margin-bottom:12px;border:1px solid #dbeafe}
+.verse-card .arabic{font-size:1.1rem;color:#0a2a54;margin-bottom:8px;line-height:1.9}
+.verse-card .translation{font-size:.85rem;color:#374151;line-height:1.5}
+.verse-card .ref{font-size:.75rem;color:#6b7280;margin-top:6px;font-style:italic}
+.hadith-card{background:#fff;border-radius:8px;padding:16px;margin-bottom:12px;border:1px solid #e5e7eb;border-left:3px solid #f5c847}
+.hadith-card .arabic{font-size:1rem;color:#1a1a2e;margin-bottom:8px;line-height:1.9}
+.hadith-card .translation{font-size:.85rem;color:#374151;line-height:1.5}
+.hadith-card .ref{font-size:.75rem;color:#6b7280;margin-top:5px;font-style:italic}
+.evidence-section{margin-bottom:20px}
+.content-section{margin-bottom:20px}
 .sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:90}
-.section-divider{height:1px;background:linear-gradient(to right,transparent,#dbeafe,transparent);margin:28px 0}
+.section-divider{height:1px;background:linear-gradient(to right,transparent,#dbeafe,transparent);margin:20px 0}
 @media(max-width:768px){
   .sidebar{transform:translateX(-100%)}
   .sidebar.open{transform:translateX(0)}
   .sidebar-overlay.show{display:block}
   .main-content{margin-left:0}
   .header-bar .hamburger{display:block}
-  .header-bar{padding:12px 16px}
-  .chapter-view{padding:24px 16px 60px}
-  .sidebar{width:280px}
-  .chapter-header h2{font-size:1.2rem}
+  .header-bar{padding:10px 14px}
+  .chapter-view{padding:20px 14px 40px}
+  .sidebar{width:270px}
+  .chapter-header h2{font-size:1.1rem}
 }
 .welcome-view{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:80vh;text-align:center;padding:40px 20px}
-.welcome-view .icon{font-size:3rem;margin-bottom:16px}
-.welcome-view h2{font-size:1.8rem;font-weight:700;color:#0a2a54;margin-bottom:8px}
-.welcome-view p{color:#6b7280;max-width:500px;line-height:1.6;font-size:.95rem}
-.welcome-view .start-btn{display:inline-block;margin-top:24px;padding:12px 32px;background:linear-gradient(135deg,#f5c847,#d4941a);color:#1a1a2e;font-weight:600;border-radius:50px;text-decoration:none;font-size:.95rem;transition:all .2s}
+.welcome-view .icon{font-size:2.5rem;margin-bottom:12px}
+.welcome-view h2{font-size:1.5rem;font-weight:700;color:#0a2a54;margin-bottom:6px}
+.welcome-view p{color:#6b7280;max-width:500px;line-height:1.5;font-size:.9rem}
+.welcome-view .start-btn{display:inline-block;margin-top:20px;padding:10px 28px;background:linear-gradient(135deg,#f5c847,#d4941a);color:#1a1a2e;font-weight:600;border-radius:50px;text-decoration:none;font-size:.9rem;transition:all .2s;cursor:pointer;border:none}
 .welcome-view .start-btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(212,148,26,.3)}
-.welcome-view .book-info{margin-top:32px;padding:20px 28px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;max-width:600px;line-height:1.7;color:#374151;font-size:.9rem}
+.welcome-view .book-info{margin-top:24px;padding:16px 24px;background:#fff;border-radius:10px;border:1px solid #e5e7eb;max-width:600px;line-height:1.6;color:#374151;font-size:.85rem}
 .welcome-view .book-info strong{color:#0a2a54}
+.welcome-view .book-info .highlight{background:rgba(245,200,71,.1);border-left:3px solid #f5c847;padding:8px 12px;margin:8px 0;border-radius:0 4px 4px 0;font-size:.8rem}
 </style>
 </head>
 <body>
 
-<!-- SIDEBAR -->
 <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
 <aside class="sidebar" id="sidebar">
   <div class="logo">
@@ -100,14 +99,12 @@ body{font-family:'Inter',sans-serif;background:#f8f6f0;color:#1a1a2e;overflow-x:
   </nav>
 </aside>
 
-<!-- MAIN -->
 <div class="main-content">
   <div class="header-bar">
-    <button class="hamburger" onclick="toggleSidebar()" aria-label="Menu">☰</button>
+    <button class="hamburger" onclick="toggleSidebar()">☰</button>
     <div class="breadcrumb">Taysīr al-ʿAzīz al-Ḥamīd <span id="breadcrumbChapter"></span></div>
   </div>
 
-  <!-- Welcome -->
   <div class="chapter-view active" id="chapterView-0">
     <div class="welcome-view">
       <div class="icon">📖</div>
@@ -117,190 +114,331 @@ body{font-family:'Inter',sans-serif;background:#f8f6f0;color:#1a1a2e;overflow-x:
         <p><strong>Auteur :</strong> Sulaymān ibn ʿAbdillāh ibn Muḥammad ibn ʿAbd al-Wahhāb<br>
         <strong>(سليمان بن عبد الله بن محمد بن عبد الوهاب)</strong><br>
         <em>1080-1233 H. / 1669-1818 C.</em></p>
-        <p style="margin-top:12px">Le petit-fils de l'auteur de <em>Kitāb al-Tawḥīd</em>, Muḥammad ibn ʿAbd al-Wahhāb, commente l'œuvre de son grand-père dans ce livre qui est l'un des plus importants commentaires du livre fondamental du Tawḥīd.</p>
-        <p style="margin-top:12px"><strong>Objectif :</strong> Propager la parole d'Allah et clarifier le Tawḥīd — l'Unicité d'Allah — conformément à la voie des pieux prédécesseurs (Salaf Ṣāliḥ).</p>
-        <p style="margin-top:12px;font-size:.8rem;color:#9ca3af">Site gratuit — Chaque chapitre contient les preuves en arabe avec leur traduction française.</p>
+        <p style="margin-top:10px">Le petit-fils de l'auteur de <em>Kitāb al-Tawḥīd</em>, Muḥammad ibn ʿAbd al-Wahhāb. Cet ouvrage est l'un des plus importants commentaires du livre fondamental du Tawḥīd.</p>
+        <div class="highlight">📌 <strong>Objectif :</strong> Propager la parole d'Allah ﷻ et clarifier le Tawḥīd — l'Unicité d'Allah — conformément à la voie des pieux prédécesseurs (Salaf Ṣāliḥ). Chaque chapitre contient les preuves en arabe avec leur traduction française.</div>
+        <p style="margin-top:10px;font-size:.75rem;color:#9ca3af">66 chapitres — Explications détaillées en français — Preuves du Coran et de la Sunna</p>
       </div>
-      <a class="start-btn" onclick="showChapter(1)">📚 Commencer la lecture</a>
+      <button class="start-btn" onclick="showChapter(1)">📚 Commencer la lecture</button>
     </div>
   </div>
 
-  <!-- Chapter views will be generated by JS -->
   <div id="chapterViews"></div>
 </div>
 
 <script>
-// ===== CHAPTERS DATA =====
-const CHAPTERS = [
-  {id:0,type:'welcome'},
-  {id:1, arNum:"الباب الأول", arTitle:"باب فضل التوحيد وما يكفر من الذنوب", frTitle:"Le mérite du Tawḥīd et les péchés qu'il efface", summary:"Ce chapitre établit la place centrale du Tawḥīd dans l'Islam. Le Tawḥīd est la plus grande des obligations et la base de toute œuvre. L'auteur cite la parole d'Allah : « Ceux qui ont cru et n'ont point voilé leur foi par de l'injustice (shirk), ceux-là ont la sécurité et ils sont bien-guidés » (6:82). Les Compagnons ont compris que « l'injustice » ici désigne le shirk. Le Prophète ﷺ a dit : « Quiconque dit : il n'y a de divinité qu'Allah, et mécroit en ce qui est adoré en dehors d'Allah, ses biens et son sang sont inviolables. » Le Tawḥīd est donc la clé du Paradis et l'effaceur des péchés.", verses:[{ar:"الَّذِينَ آمَنُوا وَلَمْ يَلْبِسُوا إِيمَانَهُم بِظُلْمٍ أُولَٰئِكَ لَهُمُ الْأَمْنُ وَهُم مُّهْتَدُونَ",fr:"Ceux qui ont cru et n'ont point voilé leur foi par de l'injustice (shirk), ceux-là ont la sécurité et ils sont bien-guidés.",ref:"Sourate al-Anʿām (6:82)"},{ar:"وَاعْبُدُوا اللَّهَ وَلَا تُشْرِكُوا بِهِ شَيْئًا",fr:"Adorez Allah et ne Lui associez rien.",ref:"Sourate an-Nisāʾ (4:36)"},{ar:"إِنَّ اللَّهَ لَا يَغْفِرُ أَنْ يُشْرَكَ بِهِ وَيَغْفِرُ مَا دُونَ ذَٰلِكَ لِمَنْ يَشَاءُ",fr:"Certes, Allah ne pardonne pas qu'on Lui associe quoi que ce soit ; et Il pardonne ce qui est moins que cela à qui Il veut.",ref:"Sourate an-Nisāʾ (4:48)"}],hadiths:[{ar:"عَنْ عُبَادَةَ بْنِ الصَّامِتِ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «مَنْ قَالَ: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، وَأَنَّ عِيسَى عَبْدُ اللَّهِ وَرَسُولُهُ... فَإِنَّ اللَّهَ يُدْخِلُهُ الْجَنَّةَ»",fr:"Quiconque atteste qu'il n'y a de divinité qu'Allah, Seul sans associé, que Muḥammad est Son serviteur et messager, qu'Issā est le serviteur d'Allah et Son messager... Allah le fera entrer au Paradis.",ref:"Rapporté par al-Bukhārī"}]},
-  {id:2, arNum:"الباب الثاني", arTitle:"باب من حقق التوحيد دخل الجنة بغير حساب", frTitle:"Celui qui réalise pleinement le Tawḥīd entre au Paradis sans jugement", summary:"Ce chapitre traite des soixante-dix mille personnes qui entreront au Paradis sans jugement ni châtiment. Le Prophète ﷺ a décrit ces gens comme ceux qui ne pratiquent pas la ruqya (incantations), ne se font pas cautériser, ne croient pas aux mauvais augures, et placent leur entière confiance en leur Seigneur. L'auteur commente que la réalisation parfaite du Tawḥīd purifie le cœur de toute attache à autre qu'Allah, ce qui est la clé de l'entrée au Paradis sans compte. La confiance absolue (tawakkul) est la manifestation la plus élevée de cette réalisation du Tawḥīd.", verses:[{ar:"إِنَّمَا الْمُؤْمِنُونَ الَّذِينَ إِذَا ذُكِرَ اللَّهُ وَجِلَتْ قُلُوبُهُمْ",fr:"Les vrais croyants sont ceux dont les cœurs frémissent quand on mentionne Allah.",ref:"Sourate al-Anfāl (8:2)"}],hadiths:[{ar:"عَنِ ابْنِ عَبَّاسٍ رضي الله عنهما قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «عُرِضَتْ عَلَيَّ الْأُمَمُ، فَرَأَيْتُ النَّبِيَّ وَمَعَهُ الرَّهْطُ، وَالنَّبِيَّ وَمَعَهُ الرَّجُلُ وَالنَّبِيَّ وَمَعَهُ الرَّجُلَانِ، وَالنَّبِيَّ لَيْسَ مَعَهُ أَحَدٌ، إِذْ رُفِعَ لِي سَوَادٌ عَظِيمٌ فَظَنَنْتُ أَنَّهُمْ أُمَّتِي، فَقِيلَ لِي: هَذَا مُوسَى وَقَوْمُهُ، ثُمَّ رُفِعَ لِي سَوَادٌ عَظِيمٌ فَقِيلَ لِي: هَؤُلَاءِ أُمَّتُكَ وَمَعَهُمْ سَبْعُونَ أَلْفًا يَدْخُلُونَ الْجَنَّةَ بِغَيْرِ حِسَابٍ وَلَا عَذَابٍ»",fr:"Il m'a été montré les nations... on m'a montré une grande foule, et il m'a été dit : Ce sont les gens de Moïse. Puis on m'a montré une autre grande foule, et il m'a été dit : Ceux-ci sont ta nation, et parmi eux soixante-dix mille qui entreront au Paradis sans jugement ni châtiment.",ref:"Rapporté par al-Bukhārī (6547) et Muslim (216)"}]},
-  {id:3, arNum:"الباب الثالث", arTitle:"باب الخوف من الشرك", frTitle:"La crainte du Shirk (polythéisme)", summary:"L'auteur explique que le croyant doit constamment craindre de tomber dans le shirk, même mineur. Le Prophète ﷺ a dit : « Ce que je crains le plus pour vous, c'est le shirk mineur : ar-Riyā' (l'ostentation). » Le shirk est le plus grand des péchés, et Allah ne pardonne pas qu'on Lui associe quoi que ce soit. Les prophètes eux-mêmes craignaient le shirk. La crainte du shirk doit accompagner le croyant tout au long de sa vie, car il suffit d'un instant d'égarement pour anéantir des années d'obéissance.", verses:[{ar:"إِنَّ اللَّهَ لَا يَغْفِرُ أَنْ يُشْرَكَ بِهِ وَيَغْفِرُ مَا دُونَ ذَٰلِكَ لِمَنْ يَشَاءُ",fr:"Certes, Allah ne pardonne pas qu'on Lui associe quoi que ce soit ; et Il pardonne ce qui est moins que cela à qui Il veut.",ref:"Sourate an-Nisāʾ (4:48)"},{ar:"وَإِذْ قَالَ إِبْرَاهِيمُ رَبِّ اجْعَلْ هَٰذَا الْبَلَدَ آمِنًا وَاجْنُبْنِي وَبَنِيَّ أَن نَّعْبُدَ الْأَصْنَامَ",fr:"Et quand Abraham dit : Seigneur, éloigne-moi ainsi que mes enfants du culte des idoles.",ref:"Sourate Ibrāhīm (14:35-36)"}],hadiths:[{ar:"عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «إِنَّ أَخْوَفَ مَا أَخَافُ عَلَيْكُمُ الشِّرْكُ الْأَصْغَرُ» قَالُوا: وَمَا الشِّرْكُ الْأَصْغَرُ يَا رَسُولَ اللَّهِ؟ قَالَ: «الرِّيَاءُ»",fr:"Ce que je crains le plus pour vous, c'est le shirk mineur. Ils dirent : Qu'est-ce que le shirk mineur ? Il dit : l'ostentation.",ref:"Rapporté par Aḥmad (5/428-429)"}]},
-  {id:4, arNum:"الباب الرابع", arTitle:"باب الدعاء إلى شهادة أن لا إله إلا الله", frTitle:"L'appel à l'attestation qu'il n'y a de divinité qu'Allah", summary:"Ce chapitre explique l'importance de la da'wa (l'appel) à l'attestation de foi. Le Prophète ﷺ envoya des lettres aux rois et aux dirigeants de son temps, les appelant à dire : « Il n'y a de divinité qu'Allah. » Le message du Tawḥīd est universel et doit être transmis à tous. L'auteur souligne que l'appel à l'unicité d'Allah est la mission de tous les prophètes, depuis Nūḥ jusqu'à Muḥammad ﷺ.", verses:[{ar:"قُلْ هَٰذِهِ سَبِيلِي أَدْعُو إِلَى اللَّهِ عَلَىٰ بَصِيرَةٍ",fr:"Dis : Voici ma voie, j'appelle à Allah en toute clairvoyance.",ref:"Sourate Yūsuf (12:108)"},{ar:"وَلَقَدْ بَعَثْنَا فِي كُلِّ أُمَّةٍ رَسُولًا أَنِ اعْبُدُوا اللَّهَ وَاجْتَنِبُوا الطَّاغُوتَ",fr:"Nous avons envoyé dans chaque communauté un Messager pour dire : Adorez Allah et écartez-vous du Ṭāghūt.",ref:"Sourate an-Naḥl (16:36)"}],hadiths:[{ar:"عَنِ ابْنِ عَبَّاسٍ رضي الله عنهما أَنَّ النَّبِيَّ صلى الله عليه وسلم بَعَثَ مُعَاذًا إِلَى الْيَمَنِ فَقَالَ: «إِنَّكَ تَأْتِي قَوْمًا أَهْلَ كِتَابٍ، فَلْيَكُنْ أَوَّلَ مَا تَدْعُوهُمْ إِلَيْهِ شَهَادَةُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ»",fr:"Tu vas vers un peuple du Livre. Que la première chose à laquelle tu les appelles soit l'attestation qu'il n'y a de divinité qu'Allah.",ref:"Rapporté par al-Bukhārī (1496) et Muslim (31)"}]},
-  {id:5, arNum:"الباب الخامس", arTitle:"باب تفسير التوحيد وشهادة أن لا إله إلا الله", frTitle:"L'explication du Tawḥīd et de l'attestation de foi", summary:"L'auteur explique en détail le sens de l'attestation « Lā ilāha illā Allāh » : elle comporte une négation (il n'y a de divinité — nafy) et une affirmation (qu'Allah — ithbāt). Elle exige du croyant de rejeter toute fausse divinité (kufr bi al-ṭāghūt) et d'adorer Allah seul (īmān bi Allāh). L'attestation n'est pas une simple formule, mais un engagement du cœur, confirmé par la langue et concrétisé par les actes.", verses:[{ar:"فَاعْلَمْ أَنَّهُ لَا إِلَهَ إِلَّا اللَّهُ",fr:"Sache donc qu'il n'y a point de divinité (digne d'adoration) à part Allah.",ref:"Sourate Muḥammad (47:19)"},{ar:"لَا إِكْرَاهَ فِي الدِّينِ ۖ قَدْ تَبَيَّنَ الرُّشْدُ مِنَ الْغَيِّ",fr:"Nulle contrainte en religion ! Car le bon chemin s'est distingué de l'égarement.",ref:"Sourate al-Baqarah (2:256)"}],hadiths:[{ar:"عَنْ عُثْمَانَ بْنِ عَفَّانَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «مَنْ مَاتَ وَهُوَ يَعْلَمُ أَنَّهُ لَا إِلَهَ إِلَّا اللَّهُ دَخَلَ الْجَنَّةَ»",fr:"Quiconque meurt en sachant qu'il n'y a de divinité qu'Allah entrera au Paradis.",ref:"Rapporté par Muslim (53)"}]},
-  {id:6, arNum:"الباب السادس", arTitle:"باب من الشرك لبس الحلقة والخيط ونحوهما لدفع البلاء", frTitle:"Du shirk : le port d'anneaux, de fils et autres pour repousser le malheur", summary:"Ce chapitre traite du port d'objets tels que des anneaux, des fils, des amulettes ou des talismans dans le but de repousser le malheur ou d'attirer la bénédiction. L'auteur explique que cela constitue du shirk car le croyant place sa confiance dans ces objets plutôt qu'en Allah Seul. Le Prophète ﷺ a dit : « Quiconque porte une amulette, qu'Allah ne réalise pas son souhait. »", verses:[{ar:"وَإِنْ يَمْسَسْكَ اللَّهُ بِضُرٍّ فَلَا كَاشِفَ لَهُ إِلَّا هُوَ",fr:"Si Allah te touche d'un mal, nul ne peut l'écarter en dehors de Lui.",ref:"Sourate Yūnus (10:107)"}],hadiths:[{ar:"عَنْ عِمْرَانَ بْنِ حُصَيْنٍ رضي الله عنه أَنَّ النَّبِيَّ صلى الله عليه وسلم رَأَى رَجُلًا فِي يَدِهِ حَلْقَةٌ مِنْ صُفْرٍ فَقَالَ: «مَا هَذِهِ؟» قَالَ: مِنَ الْوَاهِنَةِ. فَقَالَ: «انْزِعْهَا فَإِنَّهَا لَا تَزِيدُكَ إِلَّا وَهْنًا»",fr:"Le Prophète ﷺ vit un homme portant un anneau de laiton et lui dit : Qu'est-ce que ceci ? L'homme répondit : C'est pour la faiblesse. Le Prophète dit : Enlève-le, cela ne fait qu'augmenter ta faiblesse.",ref:"Rapporté par Aḥmad (4/445)"}]},
-  {id:7, arNum:"الباب السابع", arTitle:"باب في الرقى والتمائم", frTitle:"Les incantations (ruqā) et les amulettes (tamāʾim)", summary:"L'auteur distingue entre la ruqya légale (tirée du Coran et de la Sunna) et les incantations interdites. Les tamāʾim (amulettes) portées pour se protéger sont interdites car elles relèvent de l'association. Seule la protection d'Allah est efficace. La ruqya légale est permise à condition qu'elle soit en arabe, comprise, et sans rien d'associatif.", verses:[{ar:"وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِلْمُؤْمِنِينَ",fr:"Nous faisons descendre du Coran ce qui est une guérison et une miséricorde pour les croyants.",ref:"Sourate al-Isrāʾ (17:82)"}],hadiths:[{ar:"عَنْ أَبِي بَشِيرٍ الْأَنْصَارِيِّ رضي الله عنه أَنَّ النَّبِيَّ صلى الله عليه وسلم بَعَثَ رَسُولًا: «أَنْ لَا يَبْقَيَنَّ فِي رَقَبَةِ بَعِيرٍ قِلَادَةٌ مِنْ وَتَرٍ أَوْ قِلَادَةٌ إِلَّا قُطِعَتْ»",fr:"Le Prophète ﷺ envoya un messager : Qu'il ne reste aucun collier de corde d'arc au cou d'un chameau sans qu'il soit coupé.",ref:"Rapporté par al-Bukhārī (3105) et Muslim (4291)"}]},
-  {id:8, arNum:"الباب الثامن", arTitle:"باب من تبرك بشجر أو حجر أو نحو ذلك", frTitle:"Celui qui recherche la bénédiction d'un arbre, d'une pierre ou autre", summary:"La recherche de bénédiction (tabarruk) à travers des arbres, des pierres ou tout autre élément de la création est une forme de shirk. Le seul tabarruk légitime est celui qui est conforme à la Sunna. Le Prophète ﷺ a refusé catégoriquement la demande de ses Compagnons de désigner un arbre pour en rechercher la bénédiction.", hadiths:[{ar:"عَنْ أَبِي وَاقِدٍ اللَّيْثِيِّ رضي الله عنه قَالَ: خَرَجْنَا مَعَ النَّبِيِّ صلى الله عليه وسلم إِلَى حُنَيْنٍ وَنَحْنُ حُدَثَاءُ عَهْدٍ بِكُفْرٍ، فَمَرَرْنَا بِسِدْرَةٍ فَقُلْنَا: يَا رَسُولَ اللَّهِ، اجْعَلْ لَنَا ذَاتَ أَنْوَاطٍ كَمَا لَهُمْ ذَاتُ أَنْوَاطٍ. فَقَالَ: «اللَّهُ أَكْبَرُ! إِنَّهَا السُّنَنُ... لَتَرْكَبُنَّ سُنَنَ مَنْ كَانَ قَبْلَكُمْ»",fr:"Nous passâmes près d'un jujubier et dîmes : Ô Messager d'Allah, fais de nous un arbre comme ils ont leur arbre ! Il répondit : Allah est Plus Grand ! Ce sont les traditions...",ref:"Rapporté par al-Tirmidhī (2180)"}]},
-  {id:9, arNum:"الباب التاسع", arTitle:"باب ما جاء في الذبح لغير الله", frTitle:"Le sacrifice pour autre qu'Allah", summary:"Le sacrifice pour autre qu'Allah est un acte majeur de shirk. Le sacrifice est un acte d'adoration qui n'est dû qu'à Allah Seul. Le Prophète ﷺ a maudit celui qui sacrifie pour autre qu'Allah.", verses:[{ar:"فَصَلِّ لِرَبِّكَ وَانْحَرْ",fr:"Accomplis la Ṣalāt pour ton Seigneur et sacrifie.",ref:"Sourate al-Kawthar (108:2)"},{ar:"قُلْ إِنَّ صَلَاتِي وَنُسُكِي وَمَحْيَايَ وَمَمَاتِي لِلَّهِ رَبِّ الْعَالَمِينَ",fr:"Dis : En vérité, ma prière, mes actes de dévotion, ma vie et ma mort appartiennent à Allah.",ref:"Sourate al-Anʿām (6:162)"}],hadiths:[{ar:"عَنْ عَلِيِّ بْنِ أَبِي طَالِبٍ رضي الله عنه قَالَ: حَدَّثَنِي رَسُولُ اللَّهِ صلى الله عليه وسلم: «لَعَنَ اللَّهُ مَنْ ذَبَحَ لِغَيْرِ اللَّهِ»",fr:"Qu'Allah maudisse celui qui sacrifie pour autre qu'Allah.",ref:"Rapporté par Muslim (4298)"}]},
-  {id:10, arNum:"الباب العاشر", arTitle:"باب لا يذبح لله بمكان يذبح فيه لغير الله", frTitle:"On ne sacrifie pas pour Allah dans un lieu de sacrifices idolâtres", summary:"Interdiction de sacrifier pour Allah dans un endroit où l'on sacrifie à d'autres qu'Allah. Cela préserve la pureté du culte.", hadiths:[{ar:"عَنْ ثَابِتِ بْنِ الضَّحَّاكِ رضي الله عنه قَالَ: نَذَرَ رَجُلٌ أَنْ يَنْحَرَ نَاقَةً بِبُوَانَةَ، فَقَالَ النَّبِيُّ صلى الله عليه وسلم: «هَلْ كَانَ فِيهَا وَثَنٌ مِنْ أَوْثَانِ الْجَاهِلِيَّةِ يُعْبَدُ؟» قَالُوا: لَا. قَالَ: «أَوْفِ بِنَذْرِكَ»",fr:"Un homme fit le vœu d'égorger une chamelle à Buwāna. Le Prophète ﷺ demanda : Y avait-il là une idole adorée ? Non. Alors accomplis ton vœu.",ref:"Rapporté par Abū Dāwūd (3313)"}]},
-  {id:11, arNum:"الباب الحادي عشر", arTitle:"باب من الشرك النذر لغير الله", frTitle:"Du shirk : le vœu à autre qu'Allah", summary:"Faire un vœu à autre qu'Allah est du shirk, car le vœu est un acte d'adoration. Le Prophète ﷺ a dit : « Celui qui fait un vœu d'obéir à Allah, qu'il Lui obéisse ; et celui qui fait un vœu de Lui désobéir, qu'il ne Lui désobéisse pas. »", hadiths:[{ar:"عَنْ عَائِشَةَ رضي الله عنها قَالَتْ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «مَنْ نَذَرَ أَنْ يُطِيعَ اللَّهَ فَلْيُطِعْهُ، وَمَنْ نَذَرَ أَنْ يَعْصِيَهُ فَلَا يَعْصِهِ»",fr:"Celui qui fait le vœu d'obéir à Allah, qu'il Lui obéisse ; et celui qui fait le vœu de Lui désobéir, qu'il ne Lui désobéisse pas.",ref:"Rapporté par al-Bukhārī (6696)"}]},
-  {id:12, arNum:"الباب الثاني عشر", arTitle:"باب من الشرك الاستعاذة بغير الله", frTitle:"Du shirk : chercher protection auprès d'autre qu'Allah", summary:"Chercher protection (istiʿādha) auprès d'autre qu'Allah est du shirk, car la protection est un attribut exclusif d'Allah. Le Prophète ﷺ enseignait à dire : « Aʿūdhu bi kalimāti llāhi al-tāmmāti min sharri mā khalaq. »", verses:[{ar:"وَأَنَّهُ كَانَ رِجَالٌ مِّنَ الْإِنسِ يَعُوذُونَ بِرِجَالٍ مِّنَ الْجِنِّ",fr:"Il y avait des humains qui cherchaient protection auprès des jinns.",ref:"Sourate al-Jinn (72:6)"}]},
-  {id:13, arNum:"الباب الثالث عشر", arTitle:"باب من الشرك أن يستغيث بغير الله أو يدعو غيره", frTitle:"Du shirk : implorer le secours d'autre qu'Allah", summary:"Invoquer et implorer le secours d'autre qu'Allah est du shirk majeur. Le duʿāʾ est le cœur de l'adoration. Invoquer un mort ou un absent pour ce qu'il ne peut accomplir est du shirk.", verses:[{ar:"وَلَا تَدْعُ مِن دُونِ اللَّهِ مَا لَا يَنفَعُكَ وَلَا يَضُرُّكَ",fr:"N'invoque pas en dehors d'Allah ce qui ne peut ni te profiter ni te nuire.",ref:"Sourate Yūnus (10:106)"}],hadiths:[{ar:"عَنِ النُّعْمَانِ بْنِ بَشِيرٍ رضي الله عنهما قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «الدُّعَاءُ هُوَ الْعِبَادَةُ»",fr:"L'invocation est l'adoration (même).",ref:"Rapporté par al-Tirmidhī (3372)"}]},
-  {id:14, arNum:"الباب الرابع عشر", arTitle:"باب قول الله تعالى: {أيشركون ما لا يخلق شيئا}", frTitle:"« Associeraient-ils ce qui ne crée rien ? »", summary:"L'absurdité du shirk : adorer ce qui est créé et impuissant. Les idoles ne peuvent ni créer, ni subvenir aux besoins, ni repousser le mal.", verses:[{ar:"أَيُشْرِكُونَ مَا لَا يَخْلُقُ شَيْئًا وَهُمْ يُخْلَقُونَ",fr:"Associeraient-ils (à Allah) ce qui ne crée rien, et qui sont eux-mêmes créés ?",ref:"Sourate al-Aʿrāf (7:191)"}]},
-  {id:15, arNum:"الباب الخامس عشر", arTitle:"باب قوله تعالى: {حتى إذا فزع عن قلوبهم}", frTitle:"« Quand l'effroi sera ôté de leurs cœurs »", summary:"Même les anges ne peuvent intercéder qu'avec la permission d'Allah. Comment alors invoquer les saints en dehors de Lui ?", verses:[{ar:"حَتَّىٰ إِذَا فُزِّعَ عَن قُلُوبِهِمْ قَالُوا مَاذَا قَالَ رَبُّكُمْ ۖ قَالُوا الْحَقَّ",fr:"Quand l'effroi sera ôté de leurs cœurs, ils diront : Qu'a dit votre Seigneur ? Ils répondront : La Vérité.",ref:"Sourate Sabaʾ (34:23)"}]},
-  {id:16, arNum:"الباب السادس عشر", arTitle:"باب الشفاعة", frTitle:"L'intercession (ash-Shafāʿa)", summary:"L'intercession légitime est celle qu'Allah accorde à qui Il veut. L'intercession polythéiste — croire que les idoles intercéderont — est du shirk majeur.", verses:[{ar:"مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ",fr:"Qui peut intercéder auprès de Lui sans Sa permission ?",ref:"Sourate al-Baqarah (2:255)"}]},
-  {id:17, arNum:"الباب السابع عشر", arTitle:"باب قوله تعالى: {قل ادعوا الذين زعمتم من دونه}", frTitle:"« Dis : Invoquez ceux que vous prétendez être des divinités »", summary:"Allah défie les associateurs : invoquez vos fausses divinités ! Elles ne peuvent ni guider, ni secourir, ni créer.", verses:[{ar:"قُلِ ادْعُوا الَّذِينَ زَعَمْتُم مِّن دُونِهِ فَلَا يَمْلِكُونَ كَشْفَ الضُّرِّ عَنكُمْ وَلَا تَحْوِيلًا",fr:"Dis : Invoquez ceux que vous prétendez en dehors de Lui : ils ne possèdent aucun pouvoir.",ref:"Sourate al-Isrāʾ (17:56)"}]},
-  {id:18, arNum:"الباب الثامن عشر", arTitle:"باب أن سبب كفر بني آدم الغلو في الصالحين", frTitle:"La cause de la mécréance : l'exagération envers les justes", summary:"L'auteur explore l'origine historique du polythéisme : les hommes ont exagéré dans l'éloge des justes, puis les ont adorés. Le peuple de Nūḥ a divinisé cinq hommes pieux : Wadd, Suwāʿ, Yaghūth, Yaʿūq et Nasr.", verses:[{ar:"وَقَالُوا لَا تَذَرُنَّ آلِهَتَكُمْ وَلَا تَذَرُنَّ وَدًّا وَلَا سُوَاعًا وَلَا يَغُوثَ وَيَعُوقَ وَنَسْرًا",fr:"N'abandonnez jamais vos divinités : ni Wadd, ni Suwāʿ, ni Yaghūth, ni Yaʿūq, ni Nasr.",ref:"Sourate Nūḥ (71:23)"}]},
-  {id:19, arNum:"الباب التاسع عشر", arTitle:"باب التغليظ فيمن عبد الله عند قبر رجل صالح", frTitle:"La sévérité contre celui qui adore Allah près d'une tombe", summary:"Adorer Allah près d'une tombe est sévèrement condamné, car c'est la porte qui mène à l'adoration des tombes. Le Prophète ﷺ a maudit ceux qui prennent les tombes des prophètes comme lieux de prière.", hadiths:[{ar:"عَنْ عَائِشَةَ رضي الله عنها قَالَتْ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «لَعَنَ اللَّهُ الْيَهُودَ وَالنَّصَارَى اتَّخَذُوا قُبُورَ أَنْبِيَائِهِمْ مَسَاجِدَ»",fr:"Qu'Allah maudisse les juifs et les chrétiens qui ont pris les tombes de leurs prophètes comme lieux de prière.",ref:"Rapporté par al-Bukhārī (444) et Muslim (1184)"}]},
-  {id:20, arNum:"الباب العشرون", arTitle:"باب أن الغلو في قبور الصالحين يصيرها أوثانا", frTitle:"L'exagération dans les tombes des saints les transforme en idoles", summary:"Lorsque les gens exagèrent dans la vénération des tombes, celles-ci deviennent des idoles. Un phénomène historique qui s'est répété à chaque époque.", verses:[{ar:"وَقَالُوا لَا تَذَرُنَّ آلِهَتَكُمْ",fr:"N'abandonnez jamais vos divinités.",ref:"Sourate Nūḥ (71:23)"}]}
+// ===== COMPLETE CHAPTER DATA — 66 BAB =====
+const C = [
+{id:1,an:"الباب الأول",at:"باب فضل التوحيد وما يكفر من الذنوب",ft:"Le mérite du Tawḥīd et les péchés qu'il efface",
+s:`<p>L'imām Muḥammad ibn ʿAbd al-Wahhāb ouvre son livre par ce chapitre fondamental pour établir d'emblée la place centrale du Tawḥīd. Le Tawḥīd est la plus grande des obligations, la base de toutes les œuvres, et la condition sine qua non de l'acceptation des actes.</p>
+<p><strong>L'auteur (Sulaymān ibn ʿAbdillāh) explique :</strong> Le Prophète ﷺ a dit : « L'Islam a été bâti sur cinq [piliers] : l'attestation qu'il n'y a de divinité qu'Allah et que Muḥammad est le Messager d'Allah... » Le Tawḥīd est donc le premier pilier et le fondement. Sans lui, aucune œuvre n'est acceptée.</p>
+<p>Le verset principal de ce chapitre est : « Ceux qui ont cru et n'ont point voilé leur foi par de l'injustice (shirk), ceux-là ont la sécurité et ils sont bien-guidés » (6:82). Les Compagnons du Prophète ﷺ furent troublés par ce verset, disant : « Lequel d'entre nous n'a pas commis d'injustice envers lui-même ? » Le Prophète ﷺ les rassura en expliquant que l'« injustice » ici désigne le <em>shirk</em>, s'appuyant sur la parole d'Allah : « Certes, l'association (shirk) est une grande injustice » (31:13).</p>
+<p><strong>Le commentaire du sharh :</strong> Sulaymān ibn ʿAbdillāh développe longuement ce point en citant les paroles des pieux prédécesseurs. Le Tawḥīd, lorsqu'il est sincère et accompagné de ses conditions, efface tous les péchés antérieurs. Il cite le hadith de ʿUbāda ibn al-Ṣāmit : le Prophète ﷺ a dit : « Quiconque atteste qu'il n'y a de divinité qu'Allah, Seul sans associé, que Muḥammad est Son serviteur et Messager, et que ʿĪsā (Jésus) est le serviteur d'Allah et Son Messager... Allah le fera entrer au Paradis quelles que soient ses œuvres. »</p>
+<p>Le shaykh souligne que le Tawḥīd n'est pas une simple formule prononcée par la langue, mais une conviction du cœur qui se manifeste par l'obéissance à Allah et l'abandon de tout ce qui contredit Son unicité. Le véritable Tawḥīd est ce qui purifie le cœur de toute dévotion à autre qu'Allah.</p>`,
+v:[{a:"الَّذِينَ آمَنُوا وَلَمْ يَلْبِسُوا إِيمَانَهُم بِظُلْمٍ أُولَٰئِكَ لَهُمُ الْأَمْنُ وَهُم مُّهْتَدُونَ",
+f:"Ceux qui ont cru et n'ont point voilé leur foi par de l'injustice (shirk), ceux-là ont la sécurité et ils sont bien-guidés.",r:"Sourate al-Anʿām (6:82)"},
+{a:"إِنَّ اللَّهَ لَا يَغْفِرُ أَنْ يُشْرَكَ بِهِ وَيَغْفِرُ مَا دُونَ ذَٰلِكَ لِمَنْ يَشَاءُ",
+f:"Certes, Allah ne pardonne pas qu'on Lui associe quoi que ce soit ; et Il pardonne ce qui est moins que cela à qui Il veut.",r:"Sourate an-Nisāʾ (4:48)"},
+{a:"وَاعْبُدُوا اللَّهَ وَلَا تُشْرِكُوا بِهِ شَيْئًا",
+f:"Adorez Allah et ne Lui associez rien.",r:"Sourate an-Nisāʾ (4:36)"}],
+h:[{a:"عَنْ عُبَادَةَ بْنِ الصَّامِتِ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «مَنْ قَالَ: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، وَأَنَّ عِيسَى عَبْدُ اللَّهِ وَرَسُولُهُ... فَإِنَّ اللَّهَ يُدْخِلُهُ الْجَنَّةَ»",
+f:"Quiconque atteste qu'il n'y a de divinité qu'Allah, Seul sans associé, que Muḥammad est Son serviteur et Messager, qu'Issā est le serviteur d'Allah et Son Messager... Allah le fera entrer au Paradis.",r:"Rapporté par al-Bukhārī"},
+{a:"عَنِ ابْنِ مَسْعُودٍ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «إِنَّ أَثْقَلَ مَا تَكُونُ ذُنُوبُ الْعَبْدِ يَوْمَ الْقِيَامَةِ لَا إِلَهَ إِلَّا اللَّهُ»",
+f:"La chose la plus lourde dans la balance du serviteur au Jour de la Résurrection sera 'Lā ilāha illā Allāh'.",r:"Rapporté par Ibn Ḥibbān"}]},
+
+{id:2,an:"الباب الثاني",at:"باب من حقق التوحيد دخل الجنة بغير حساب",ft:"Celui qui réalise parfaitement le Tawḥīd entre au Paradis sans jugement",
+s:`<p>Ce chapitre est centré sur le célèbre hadith des soixante-dix mille personnes qui entreront au Paradis sans jugement ni châtiment.</p>
+<p><strong>Explication du sharh :</strong> Sulaymān ibn ʿAbdillāh commente longuement ce hadith fondamental. Le Prophète ﷺ a dit : « Ils sont ceux qui ne pratiquent pas la ruqya (incantations), ne se font pas cautériser, ne croient pas aux mauvais augures, et placent leur entière confiance en leur Seigneur. »</p>
+<p>L'auteur examine chaque point :</p>
+<ul style="padding-left:20px;margin:8px 0">
+<li><strong>« Ne pratiquent pas la ruqya »</strong> — parce qu'ils n'ont pas besoin de recourir aux incantations, tant leur confiance en Allah est puissante. Il ne s'agit pas d'interdire la ruqya légale, mais de montrer le degré élevé de leur tawakkul.</li>
+<li><strong>« Ne se font pas cautériser »</strong> — ils ne recourent pas à des traitements douloureux par confiance absolue en Allah.</li>
+<li><strong>« Ne croient pas aux mauvais augures »</strong> — ils sont purifiés de toute forme de superstition qui pourrait entamer leur Tawḥīd.</li>
+<li><strong>« Placent leur entière confiance en leur Seigneur »</strong> — c'est le cœur du sujet : le tawakkul parfait.</li>
+</ul>
+<p>Le shaykh cite Ibn Rajab qui a dit : « Celui qui réalise parfaitement le Tawḥīd, son cœur est rempli de la crainte révérencielle d'Allah, de Son amour, de Sa glorification, et de la confiance en Lui au point qu'il n'a peur que d'Allah, n'espère qu'en Allah, et ne place sa confiance qu'en Allah. Les créatures et les causes ne comptent plus à ses yeux. »</p>
+<p>Ibn al-Qayyim a dit : « La perfection du Tawḥīd vide le cœur de toute préoccupation pour autre qu'Allah et le remplit de la connaissance, de l'amour et de la crainte d'Allah. »</p>`,
+v:[{a:"إِنَّمَا الْمُؤْمِنُونَ الَّذِينَ إِذَا ذُكِرَ اللَّهُ وَجِلَتْ قُلُوبُهُمْ",
+f:"Les vrais croyants sont ceux dont les cœurs frémissent quand on mentionne Allah.",r:"Sourate al-Anfāl (8:2)"},
+{a:"وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ",
+f:"Et quiconque place sa confiance en Allah, Il lui suffit.",r:"Sourate al-Ṭalāq (65:3)"}],
+h:[{a:"عَنِ ابْنِ عَبَّاسٍ رضي الله عنهما قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «عُرِضَتْ عَلَيَّ الْأُمَمُ، فَرَأَيْتُ النَّبِيَّ وَمَعَهُ الرَّهْطُ، وَالنَّبِيَّ وَمَعَهُ الرَّجُلُ وَالنَّبِيَّ وَمَعَهُ الرَّجُلَانِ، وَالنَّبِيَّ لَيْسَ مَعَهُ أَحَدٌ، إِذْ رُفِعَ لِي سَوَادٌ عَظِيمٌ فَظَنَنْتُ أَنَّهُمْ أُمَّتِي، فَقِيلَ لِي: هَذَا مُوسَى وَقَوْمُهُ، ثُمَّ رُفِعَ لِي سَوَادٌ عَظِيمٌ فَقِيلَ لِي: هَؤُلَاءِ أُمَّتُكَ وَمَعَهُمْ سَبْعُونَ أَلْفًا يَدْخُلُونَ الْجَنَّةَ بِغَيْرِ حِسَابٍ وَلَا عَذَابٍ»",
+f:"Il m'a été montré les nations... on m'a montré une grande foule, et il m'a été dit : Ce sont les gens de Moïse. Puis on m'a montré une autre grande foule, et il m'a été dit : Ceux-ci sont ta nation, et parmi eux soixante-dix mille qui entreront au Paradis sans jugement ni châtiment.",r:"Rapporté par al-Bukhārī (6547) et Muslim (216)"}]},
+
+{id:3,an:"الباب الثالث",at:"باب الخوف من الشرك",ft:"La crainte du Shirk (polythéisme)",
+s:`<p>L'auteur établit dans ce chapitre que la crainte du shirk doit être constante chez le croyant. Personne n'est à l'abri de ce péché, même les plus pieux.</p>
+<p><strong>Explication du sharh :</strong> Sulaymān ibn ʿAbdillāh commente le verset où Ibrāhīm (Abraham) ﷺ dit : « Éloigne-moi ainsi que mes enfants du culte des idoles » (14:35). Il fait remarquer que si le plus grand des prophètes après Muḥammad ﷺ — Ibrāhīm, le <em>khalīl</em> (l'ami intime) d'Allah — craignait le shirk pour lui-même et pour ses enfants, alors nous devons encore plus le craindre.</p>
+<p>Le shirk mineur (al-shirk al-aṣghar) est le riyāʾ (l'ostentation). Le Prophète ﷺ l'a clairement désigné comme « ce que je crains le plus pour vous. » L'auteur cite Ibn ʿAbbās : « Le shirk est plus caché que la fourmi noire sur une pierre noire dans l'obscurité de la nuit. »</p>
+<p>Le shaykh développe trois points essentiels :</p>
+<ul style="padding-left:20px;margin:8px 0">
+<li>La crainte du shirk ne diminue pas la confiance en Allah, au contraire — plus on craint le shirk, plus on protège son Tawḥīd.</li>
+<li>Le shirk peut être évident (shirk jaliy) comme l'adoration des idoles, ou caché (shirk khafiy) comme l'hypocrisie ou l'ostentation.</li>
+<li>Le fait que le Prophète ﷺ ait craint le shirk pour sa communauté est une preuve que le croyant doit toujours être vigilant.</li>
+</ul>`,
+v:[{a:"وَإِذْ قَالَ إِبْرَاهِيمُ رَبِّ اجْعَلْ هَٰذَا الْبَلَدَ آمِنًا وَاجْنُبْنِي وَبَنِيَّ أَن نَّعْبُدَ الْأَصْنَامَ",
+f:"Et quand Abraham dit : Seigneur, éloigne-moi ainsi que mes enfants du culte des idoles.",r:"Sourate Ibrāhīm (14:35-36)"},
+{a:"إِنَّ اللَّهَ لَا يَغْفِرُ أَنْ يُشْرَكَ بِهِ",
+f:"Certes, Allah ne pardonne pas qu'on Lui associe quoi que ce soit.",r:"Sourate an-Nisāʾ (4:48)"}],
+h:[{a:"عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «إِنَّ أَخْوَفَ مَا أَخَافُ عَلَيْكُمُ الشِّرْكُ الْأَصْغَرُ» قَالُوا: وَمَا الشِّرْكُ الْأَصْغَرُ يَا رَسُولَ اللَّهِ؟ قَالَ: «الرِّيَاءُ»",
+f:"Ce que je crains le plus pour vous, c'est le shirk mineur. Ils dirent : Qu'est-ce que le shirk mineur, ô Messager d'Allah ? Il dit : l'ostentation.",r:"Rapporté par Aḥmad (5/428-429)"}]},
+
+{id:4,an:"الباب الرابع",at:"باب الدعاء إلى شهادة أن لا إله إلا الله",ft:"L'appel à l'attestation de foi",
+s:`<p>Ce chapitre explique la mission fondamentale de tous les prophètes : appeler les gens à l'Unicité d'Allah. L'invitation au Tawḥīd est la première obligation de la da'wa.</p>
+<p><strong>Explication du sharh :</strong> Sulaymān ibn ʿAbdillāh commente le hadith où le Prophète ﷺ envoie Muʿādh ibn Jabal au Yémen en lui disant : « Tu vas vers un peuple du Livre. Que la première chose à laquelle tu les appelles soit l'attestation qu'il n'y a de divinité qu'Allah. » Le Prophète ﷺ lui ordonne également de les informer des obligations religieuses après qu'ils aient accepté le Tawḥīd.</p>
+<p>L'auteur souligne que l'ordre d'appeler au Tawḥīd précède l'ordre d'établir la prière et le jeûne, car le Tawḥīd est la base. Il cite le verset : « Nous avons envoyé dans chaque communauté un Messager [pour dire] : Adorez Allah et écartez-vous du Ṭāghūt » (16:36).</p>
+<p>Le shaykh note que la méthode du Prophète ﷺ dans l'appel à l'Islam était progressive : commencer par le Tawḥīd, puis les piliers de l'Islam, puis le reste de la Législation.</p>`,
+v:[{a:"قُلْ هَٰذِهِ سَبِيلِي أَدْعُو إِلَى اللَّهِ عَلَىٰ بَصِيرَةٍ أَنَا وَمَنِ اتَّبَعَنِي",
+f:"Dis : Voici ma voie, j'appelle à Allah en toute clairvoyance, moi et ceux qui me suivent.",r:"Sourate Yūsuf (12:108)"},
+{a:"وَلَقَدْ بَعَثْنَا فِي كُلِّ أُمَّةٍ رَسُولًا أَنِ اعْبُدُوا اللَّهَ وَاجْتَنِبُوا الطَّاغُوتَ",
+f:"Nous avons envoyé dans chaque communauté un Messager [pour dire] : Adorez Allah et écartez-vous du Ṭāghūt.",r:"Sourate an-Naḥl (16:36)"}],
+h:[{a:"عَنِ ابْنِ عَبَّاسٍ رضي الله عنهما أَنَّ النَّبِيَّ صلى الله عليه وسلم بَعَثَ مُعَاذًا إِلَى الْيَمَنِ فَقَالَ: «إِنَّكَ تَأْتِي قَوْمًا أَهْلَ كِتَابٍ، فَلْيَكُنْ أَوَّلَ مَا تَدْعُوهُمْ إِلَيْهِ شَهَادَةُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ»",
+f:"Tu vas vers un peuple du Livre. Que la première chose à laquelle tu les appelles soit l'attestation qu'il n'y a de divinité qu'Allah.",r:"Rapporté par al-Bukhārī (1496) et Muslim (31)"}]},
+
+{id:5,an:"الباب الخامس",at:"باب تفسير التوحيد وشهادة أن لا إله إلا الله",ft:"L'explication du Tawḥīd et de l'attestation de foi",
+s:`<p>Ce chapitre est l'un des plus importants car il définit le sens précis de l'attestation « Lā ilāha illā Allāh ».</p>
+<p><strong>Explication du sharh :</strong> Sulaymān ibn ʿAbdillāh explique que cette formule comporte deux parties inséparables :</p>
+<ul style="padding-left:20px;margin:8px 0">
+<li><strong>La négation (nafy) :</strong> « Lā ilāha » — il n'y a point de divinité (digne d'adoration). C'est le rejet de toutes les fausses divinités, la mécréance au Ṭāghūt.</li>
+<li><strong>L'affirmation (ithbāt) :</strong> « illā Allāh » — si ce n'est Allah. C'est la consécration exclusive de toute adoration à Allah Seul.</li>
+</ul>
+<p>Le shaykh insiste sur le fait que la simple prononciation de cette formule ne suffit pas. Les hypocrites (munāfiqūn) la prononçaient mais Allah les a qualifiés de mécréants les plus bas dans le Feu. Ce qui compte, c'est la compréhension de son sens, la conviction du cœur, et la mise en pratique par les actes.</p>
+<p>Il cite le verset : « Nulle contrainte en religion ! Car le bon chemin s'est distingué de l'égarement. Donc, quiconque mécroit au Ṭāghūt et croit en Allah, saisit l'anse la plus solide » (2:256). L'« anse la plus solide » (al-ʿurwa al-wuthqā) est l'attestation « Lā ilāha illā Allāh », et elle ne peut être saisie qu'avec ces deux conditions : la mécréance au Ṭāghūt et la foi en Allah.</p>
+<p>L'auteur cite al-Ḥasan al-Baṣrī : « La différence entre les croyants et les hypocrites dans cette formule est que les hypocrites la prononcent mais leur cœur la contredit et leurs actes la démentent, tandis que les croyants la prononcent avec leur langue, la croient dans leur cœur et la mettent en pratique par leurs actes. »</p>`,
+v:[{a:"فَاعْلَمْ أَنَّهُ لَا إِلَهَ إِلَّا اللَّهُ",
+f:"Sache donc qu'il n'y a point de divinité [digne d'adoration] à part Allah.",r:"Sourate Muḥammad (47:19)"},
+{a:"فَمَنْ يَكْفُرْ بِالطَّاغُوتِ وَيُؤْمِنْ بِاللَّهِ فَقَدِ اسْتَمْسَكَ بِالْعُرْوَةِ الْوُثْقَىٰ",
+f:"Quiconque mécroit au Ṭāghūt et croit en Allah, saisit l'anse la plus solide, qui ne peut se briser.",r:"Sourate al-Baqarah (2:256)"}],
+h:[{a:"عَنْ عُثْمَانَ بْنِ عَفَّانَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «مَنْ مَاتَ وَهُوَ يَعْلَمُ أَنَّهُ لَا إِلَهَ إِلَّا اللَّهُ دَخَلَ الْجَنَّةَ»",
+f:"Quiconque meurt en sachant qu'il n'y a de divinité qu'Allah entrera au Paradis.",r:"Rapporté par Muslim (53)"}]},
+
+{id:6,an:"الباب السادس",at:"باب من الشرك لبس الحلقة والخيط ونحوهما",ft:"Du shirk : le port d'anneaux et de fils pour repousser le mal",
+s:`<p>Ce chapitre traite de l'une des formes de shirk les plus répandues, hier comme aujourd'hui : le port d'objets censés protéger ou attirer la bonne fortune.</p>
+<p><strong>Explication du sharh :</strong> Sulaymān ibn ʿAbdillāh rapporte que le Prophète ﷺ a vu un homme portant un anneau de laiton (ṣufr) au bras et lui a dit : « Qu'est-ce que ceci ? » L'homme répondit : « C'est pour la faiblesse (al-wāhina). » Le Messager ﷺ lui ordonna : « Enlève-le, car cela ne fait qu'augmenter ta faiblesse. »</p>
+<p>Le shaykh explique que cet homme croyait que l'anneau le protégeait ou le guérissait d'une faiblesse. En plaçant sa confiance dans cet objet, il commettait un acte de shirk. Si Allah veut qu'un mal te touche, aucun objet ne peut le repousser. C'est uniquement par la confiance en Allah et par les moyens légitimes (comme les invocations et les traitements médicaux) que l'on peut se préserver.</p>
+<p>L'auteur cite Ibn Masʿūd : « Les tamāʾim (amulettes), les ruqā (incantations) et le tiwala (charme d'amour) sont du shirk. »</p>`,
+v:[{a:"وَإِنْ يَمْسَسْكَ اللَّهُ بِضُرٍّ فَلَا كَاشِفَ لَهُ إِلَّا هُوَ",
+f:"Si Allah te touche d'un mal, nul ne peut l'écarter en dehors de Lui.",r:"Sourate Yūnus (10:107)"}],
+h:[{a:"عَنْ عِمْرَانَ بْنِ حُصَيْنٍ رضي الله عنه أَنَّ النَّبِيَّ صلى الله عليه وسلم رَأَى رَجُلًا فِي يَدِهِ حَلْقَةٌ مِنْ صُفْرٍ فَقَالَ: «مَا هَذِهِ؟» قَالَ: مِنَ الْوَاهِنَةِ. فَقَالَ: «انْزِعْهَا فَإِنَّهَا لَا تَزِيدُكَ إِلَّا وَهْنًا»",
+f:"Le Prophète ﷺ vit un homme portant un anneau de laiton et lui dit : Qu'est-ce que ceci ? L'homme répondit : C'est pour la faiblesse. Le Prophète dit : Enlève-le, car cela ne fait qu'augmenter ta faiblesse.",r:"Rapporté par Aḥmad (4/445)"}]},
+
+{id:7,an:"الباب السابع",at:"باب في الرقى والتمائم",ft:"Les incantations et les amulettes",
+s:`<p>Ce chapitre établit une distinction cruciale entre les incantations légitimes et celles qui tombent dans le shirk.</p>
+<p><strong>Explication du sharh :</strong> L'auteur distingue trois catégories :</p>
+<ul style="padding-left:20px;margin:8px 0">
+<li><strong>La ruqya légale :</strong> celle qui utilise les versets du Coran, les noms d'Allah et les invocations prophétiques. Elle est permise et même recommandée. Le Prophète ﷺ a dit : « Il n'y a pas de mal à pratiquer la ruqya tant qu'elle ne contient pas de shirk. »</li>
+<li><strong>Les amulettes (tamāʾim) :</strong> objets portés pour se protéger. Elles sont interdites : « Quiconque porte une amulette commet un acte de shirk. »</li>
+<li><strong>Les incantations païennes :</strong> formules incompréhensibles, invocations aux démons ou aux jinns, nœuds, etc. — ce sont des formes de sorcellerie et de mécréance.</li>
+</ul>
+<p>Le hadith d'Abū Bashīr al-Anṣārī est cité : le Prophète ﷺ ordonna de couper tout collier au cou des chameaux, car les Arabes croyaient que ces colliers les protégeaient du mauvais œil. Les Compagnons du Prophète ﷺ considéraient que toute amulette était du shirk.</p>`,
+v:[{a:"وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِلْمُؤْمِنِينَ",
+f:"Nous faisons descendre du Coran ce qui est une guérison et une miséricorde pour les croyants.",r:"Sourate al-Isrāʾ (17:82)"}],
+h:[{a:"عَنْ عَبْدِ اللَّهِ بْنِ مَسْعُودٍ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «إِنَّ الرُّقَى وَالتَّمَائِمَ وَالتِّوَلَةَ شِرْكٌ»",
+f:"Les incantations, les amulettes et les charmes d'amour sont du shirk.",r:"Rapporté par Abū Dāwūd (3883)"}]}
 ];
 
-// Complete all 66 chapters with concise summaries for remaining ones
-const extraChapters = [
-  {id:21, arNum:"الباب الحادي والعشرون", arTitle:"باب حماية المصطفى جناب التوحيد", frTitle:"La protection du Prophète ﷺ pour le Tawḥīd", summary:"Le Prophète ﷺ a protégé le Tawḥīd en interdisant tout chemin qui y conduit (sadd al-dharāʾiʿ), y compris les prières aux moments où les idolâtres se prosternent.", hadiths:[{ar:"عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «لَا تُشَدُّ الرِّحَالُ إِلَّا إِلَى ثَلَاثَةِ مَسَاجِدَ»",fr:"Ne voyagez (dans un but cultuel) que vers trois mosquées.",ref:"Rapporté par al-Bukhārī (1264) et Muslim (2377)"}]},
-  {id:22, arNum:"الباب الثاني والعشرون", arTitle:"باب ما جاء أن بعض هذه الأمة يعبد الأوثان", frTitle:"Certains de cette nation adoreront les idoles", summary:"Le Prophète ﷺ a prophétisé que certains de sa communauté tomberont dans le shirk. Une mise en garde contre la complaisance."},
-  {id:23, arNum:"الباب الثالث والعشرون", arTitle:"باب ما جاء في السحر", frTitle:"La sorcellerie (sihr)", summary:"La sorcellerie est une forme de mécréance. Le Prophète ﷺ a inclus la sorcellerie parmi les sept péchés destructeurs. Le sorcier atteint la mécréance par son alliance avec les démons.", verses:[{ar:"وَمَا يُعَلِّمَانِ مِنْ أَحَدٍ حَتَّىٰ يَقُولَا إِنَّمَا نَحْنُ فِتْنَةٌ فَلَا تَكْفُرْ",fr:"Ils n'enseignaient rien sans dire : Nous ne sommes qu'une tentation, ne sois pas mécréant.",ref:"Sourate al-Baqarah (2:102)"}],hadiths:[{ar:"عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: «اجْتَنِبُوا السَّبْعَ الْمُوبِقَاتِ» قَالَ: «الشِّرْكُ بِاللَّهِ، وَالسِّحْرُ...»",fr:"Évitez les sept péchés destructeurs : le shirk, la sorcellerie...",ref:"Rapporté par al-Bukhārī (6857) et Muslim (177)"}]},
-  {id:24, arNum:"الباب الرابع والعشرون", arTitle:"باب بيان شيء من أنواع السحر", frTitle:"Les types de sorcellerie", summary:"Les nœuds, les souffles, les incantations sataniques. La guérison se fait par les muʿawwidhat (sourates al-Falaq et al-Nās).", verses:[{ar:"قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ * مِن شَرِّ مَا خَلَقَ * وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ * وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",fr:"Dis : Je cherche protection auprès du Seigneur de l'aube... contre le mal de celles qui soufflent sur les nœuds.",ref:"Sourate al-Falaq (113:1-4)"}]},
-  {id:25, arNum:"الباب الخامس والعشرون", arTitle:"باب ما جاء في الكهان ونحوهم", frTitle:"Les devins (kuhhān)", summary:"Consulter les devins, astrologues ou voyants est de la mécréance. Croire en leur connaissance de l'invisible est un rejet du Coran.", verses:[{ar:"قُل لَّا يَعْلَمُ مَن فِي السَّمَاوَاتِ وَالْأَرْضِ الْغَيْبَ إِلَّا اللَّهُ",fr:"Nul dans les cieux et sur la terre ne connaît l'Invisible, excepté Allah.",ref:"Sourate an-Naml (27:65)"}],hadiths:[{ar:"عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: «مَنْ أَتَى كَاهِنًا فَصَدَّقَهُ بِمَا يَقُولُ فَقَدْ كَفَرَ بِمَا أُنْزِلَ عَلَى مُحَمَّدٍ»",fr:"Celui qui va voir un devin et le croit a mécru en ce qui a été révélé à Muḥammad.",ref:"Rapporté par Abū Dāwūd (3904)"}]},
-  {id:26, arNum:"الباب السادس والعشرون", arTitle:"باب ما جاء في التنجيم", frTitle:"L'astrologie (tanjīm)", summary:"La croyance que les astres influencent le destin est du shirk. L'astronomie utile est permise (orientation, saisons)."},
-  {id:27, arNum:"الباب السابع والعشرون", arTitle:"باب ما جاء في الطيرة", frTitle:"Les mauvais augures (ṭiyara)", summary:"La croyance aux mauvais présages est du shirk mineur. Le Prophète ﷺ a dit trois fois : « La ṭiyara est du shirk. »", hadiths:[{ar:"عَنِ ابْنِ مَسْعُودٍ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «الطِّيَرَةُ مِنَ الشِّرْكِ»",fr:"Les mauvais augures relèvent du shirk.",ref:"Rapporté par Abū Dāwūd (3910) et al-Tirmidhī (1614)"}]},
-  {id:28, arNum:"الباب الثامن والعشرون", arTitle:"باب ما جاء في التصوير", frTitle:"Les images et statues (taṣwīr)", summary:"La fabrication d'images d'êtres animés est interdite car elle a toujours été le point de départ du shirk. Les fabricants d'images seront les plus sévèrement châtiés."},
-  {id:29, arNum:"الباب التاسع والعشرون", arTitle:"باب ما جاء في الاستسقاء بالأنواء", frTitle:"La demande de pluie par les astres", summary:"Attribuer la pluie aux étoiles est du shirk. Le croyant dit : « Nous avons reçu la pluie par la grâce d'Allah et Sa miséricorde. »", hadiths:[{ar:"عَنْ زَيْدِ بْنِ خَالِدٍ الْجُهَنِيِّ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «أَصْبَحَ مِنْ عِبَادِي مُؤْمِنٌ بِي وَكَافِرٌ، فَمَنْ قَالَ: مُطِرْنَا بِفَضْلِ اللَّهِ وَرَحْمَتِهِ فَذَلِكَ مُؤْمِنٌ بِي، وَمَنْ قَالَ: مُطِرْنَا بِنَوْءِ كَذَا فَذَلِكَ كَافِرٌ بِي»",fr:"Ce matin, parmi Mes serviteurs, il y a ceux qui croient en Moi et ceux qui mécroient. Celui qui dit : Nous avons reçu la pluie par la grâce d'Allah, celui-là croit en Moi.",ref:"Rapporté par al-Bukhārī (1038) et Muslim (188)"}]},
-  {id:30, arNum:"الباب الثلاثون", arTitle:"باب قوله تعالى: {ومن الناس من يتخذ من دون الله أندادا}", frTitle:"« Parmi les hommes, certains prennent des égaux en dehors d'Allah »", summary:"Aimer quoi que ce soit d'un amour égal ou supérieur à celui dû à Allah est du shirk. Le véritable croyant aime Allah par-dessus tout.", verses:[{ar:"وَمِنَ النَّاسِ مَن يَتَّخِذُ مِن دُونِ اللَّهِ أَندَادًا يُحِبُّونَهُمْ كَحُبِّ اللَّهِ ۖ وَالَّذِينَ آمَنُوا أَشَدُّ حُبًّا لِّلَّهِ",fr:"Parmi les hommes, certains prennent des égaux en dehors d'Allah, les aimant comme on aime Allah. Mais ceux qui ont cru ont un amour plus intense pour Allah.",ref:"Sourate al-Baqarah (2:165)"}]},
-  {id:31, arNum:"الباب الحادي والثلاثون", arTitle:"باب قوله تعالى: {قل إنما حرم ربي الفواحش}", frTitle:"« Dis : Mon Seigneur n'a interdit que les turpitudes »", summary:"Allah a interdit les turpitudes, le péché, l'agression, le shirk et le fait de dire sur Allah ce qu'on ne sait pas.", verses:[{ar:"قُلْ إِنَّمَا حَرَّمَ رَبِّيَ الْفَوَاحِشَ مَا ظَهَرَ مِنْهَا وَمَا بَطَنَ",fr:"Dis : Mon Seigneur n'a interdit que les turpitudes, apparentes ou cachées.",ref:"Sourate al-Aʿrāf (7:33)"}]},
-  {id:32, arNum:"الباب الثاني والثلاثون", arTitle:"باب قوله تعالى: {وعلى الله فتوكلوا}", frTitle:"« Placez votre confiance en Allah »", summary:"Le tawakkul (confiance en Allah) est une condition de la foi. Cela n'empêche pas de prendre les moyens légitimes, mais le cœur ne se fie qu'à Allah.", verses:[{ar:"وَعَلَى اللَّهِ فَتَوَكَّلُوا إِن كُنتُم مُّؤْمِنِينَ",fr:"Placez votre confiance en Allah, si vous êtes croyants.",ref:"Sourate al-Māʾidah (5:23)"}]},
-  {id:33, arNum:"الباب الثالث والثلاثون", arTitle:"باب قوله تعالى: {أفأمنوا مكر الله}", frTitle:"« Sont-ils à l'abri du stratagème d'Allah ? »", summary:"Le croyant chemine entre crainte et espoir. Se sentir à l'abri du châtiment d'Allah ou désespérer de Sa miséricorde sont deux extrêmes blâmables.", verses:[{ar:"أَفَأَمِنُوا مَكْرَ اللَّهِ ۚ فَلَا يَأْمَنُ مَكْرَ اللَّهِ إِلَّا الْقَوْمُ الْخَاسِرُونَ",fr:"Seuls les gens perdus se croient à l'abri du stratagème d'Allah.",ref:"Sourate al-Aʿrāf (7:99)"}]},
-  {id:34, arNum:"الباب الرابع والثلاثون", arTitle:"باب من الإيمان بالله الصبر على أقدار الله", frTitle:"La patience face au décret divin fait partie de la foi", summary:"La patience (ṣabr) face au décret (qadar) est une partie intégrante de la foi. Se plaindre du destin revient à remettre en question la sagesse d'Allah.", verses:[{ar:"مَا أَصَابَ مِن مُّصِيبَةٍ إِلَّا بِإِذْنِ اللَّهِ ۗ وَمَن يُؤْمِن بِاللَّهِ يَهْدِ قَلْبَهُ",fr:"Nul malheur n'atteint qu'avec la permission d'Allah. Et quiconque croit en Allah, Il guide son cœur.",ref:"Sourate al-Taghābun (64:11)"}]},
-  {id:35, arNum:"الباب الخامس والثلاثون", arTitle:"باب ما جاء في الرياء", frTitle:"L'ostentation (riyāʾ)", summary:"Le riyāʾ est le shirk mineur : accomplir des actes d'adoration pour être vu. Le Prophète ﷺ le craignait plus que tout pour sa communauté.", verses:[{ar:"فَمَن كَانَ يَرْجُو لِقَاءَ رَبِّهِ فَلْيَعْمَلْ عَمَلًا صَالِحًا وَلَا يُشْرِكْ بِعِبَادَةِ رَبِّهِ أَحَدًا",fr:"Quiconque espère rencontrer son Seigneur, qu'il fasse une bonne œuvre et n'associe personne à l'adoration de son Seigneur.",ref:"Sourate al-Kahf (18:110)"}]},
-  {id:36, arNum:"الباب السادس والثلاثون", arTitle:"باب من الشرك إرادة الإنسان بعمله الدنيا", frTitle:"Vouloir par son œuvre la vie d'ici-bas", summary:"Accomplir des actes religieux pour des biens mondains annule leur valeur dans l'au-delà.", verses:[{ar:"مَن كَانَ يُرِيدُ الْحَيَاةَ الدُّنْيَا وَزِينَتَهَا نُوَفِّ إِلَيْهِمْ أَعْمَالَهُمْ فِيهَا",fr:"Ceux qui veulent la vie présente, Nous les rétribuerons entièrement durant celle-ci.",ref:"Sourate Hūd (11:15)"}]},
-  {id:37, arNum:"الباب السابع والثلاثون", arTitle:"باب من أطاع العلماء والأمراء في تحريم ما أحل الله", frTitle:"Obéir aux savants et aux dirigeants dans l'illicite", summary:"Obéir à une créature qui déclare illicite ce qu'Allah a rendu licite, ou l'inverse, est une forme de shirk. L'obéissance absolue en matière religieuse revient à Allah seul.", verses:[{ar:"اتَّخَذُوا أَحْبَارَهُمْ وَرُهْبَانَهُمْ أَرْبَابًا مِّن دُونِ اللَّهِ",fr:"Ils ont pris leurs rabbins et leurs moines comme seigneurs en dehors d'Allah.",ref:"Sourate al-Tawbah (9:31)"}]},
-  {id:38, arNum:"الباب الثامن والثلاثون", arTitle:"باب قوله تعالى: {ألم تر إلى الذين يزعمون}", frTitle:"« N'as-tu pas vu ceux qui prétendent croire ? »", summary:"L'acceptation du jugement d'Allah et du Prophète est la condition de la foi véritable. Le recours au ṭāghūt pour jugement est de la mécréance.", verses:[{ar:"فَلَا وَرَبِّكَ لَا يُؤْمِنُونَ حَتَّىٰ يُحَكِّمُوكَ فِيمَا شَجَرَ بَيْنَهُمْ",fr:"Par ton Seigneur ! Ils ne croiront pas jusqu'à ce qu'ils te prennent pour juge de leurs différends.",ref:"Sourate an-Nisāʾ (4:65)"}]},
-  {id:39, arNum:"الباب التاسع والثلاثون", arTitle:"باب من جحد شيئا من الأسماء والصفات", frTitle:"Nier les Noms et Attributs d'Allah", summary:"Nier ce qu'Allah s'est attribué comme Noms et Attributs est une forme de mécréance. La voie des gens de la Sunna : les affirmer sans déformation ni modalité.", verses:[{ar:"وَلِلَّهِ الْأَسْمَاءُ الْحُسْنَىٰ فَادْعُوهُ بِهَا ۖ وَذَرُوا الَّذِينَ يُلْحِدُونَ فِي أَسْمَائِهِ",fr:"À Allah appartiennent les plus beaux Noms. Invoquez-Le par ces Noms et laissez ceux qui les profanent.",ref:"Sourate al-Aʿrāf (7:180)"}]},
-  {id:40, arNum:"الباب الأربعون", arTitle:"باب قوله تعالى: {يعرفون نعمة الله ثم ينكرونها}", frTitle:"« Ils reconnaissent le bienfait d'Allah puis le renient »", summary:"Le déni des bienfaits d'Allah est de la mécréance. Les associateurs reconnaissaient Allah comme Créateur mais Lui associaient d'autres dans l'adoration.", verses:[{ar:"يَعْرِفُونَ نِعْمَتَ اللَّهِ ثُمَّ يُنكِرُونَهَا وَأَكْثَرُهُمُ الْكَافِرُونَ",fr:"Ils reconnaissent le bienfait d'Allah puis le renient ; la plupart sont des mécréants.",ref:"Sourate an-Naḥl (16:83)"}]},
-  {id:41, arNum:"الباب الحادي والأربعون", arTitle:"باب قوله تعالى: {فلا تجعلوا لله أندادا}", frTitle:"« Ne donnez pas d'égaux à Allah »", summary:"L'association peut être évidente ou subtile. La preuve de l'unicité d'Allah est claire — le polythéiste n'a aucune excuse.", verses:[{ar:"فَلَا تَجْعَلُوا لِلَّهِ أَندَادًا وَأَنتُمْ تَعْلَمُونَ",fr:"Ne donnez pas d'égaux à Allah alors que vous savez.",ref:"Sourate al-Baqarah (2:22)"}]},
-  {id:42, arNum:"الباب الثاني والأربعون", arTitle:"باب من لم يقنع بالحلف بالله", frTitle:"Celui qui n'est pas satisfait du serment par Allah", summary:"Exiger un serment par autre qu'Allah indique une faiblesse dans le Tawḥīd. Le serment n'est légitime que par Allah.", hadiths:[{ar:"عَنْ عُمَرَ بْنِ الْخَطَّابِ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «مَنْ حَلَفَ بِغَيْرِ اللَّهِ فَقَدْ كَفَرَ أَوْ أَشْرَكَ»",fr:"Quiconque jure par autre qu'Allah a commis un acte de mécréance ou d'association.",ref:"Rapporté par al-Tirmidhī (1535)"}]},
-  {id:43, arNum:"الباب الثالث والأربعون", arTitle:"باب قول: ما شاء الله وشئت", frTitle:"« Ce qu'Allah veut et ce que tu veux »", summary:"Cette parole est interdite car elle associe la volonté humaine à celle d'Allah sur un pied d'égalité. Le Prophète ﷺ a corrigé : « Dis plutôt : Ce qu'Allah veut seul. »", hadiths:[{ar:"عَنِ ابْنِ عَبَّاسٍ رضي الله عنهما أَنَّ رَجُلًا قَالَ لِلنَّبِيِّ صلى الله عليه وسلم: مَا شَاءَ اللَّهُ وَشِئْتَ. فَقَالَ: «أَجَعَلْتَنِي لِلَّهِ نِدًّا؟ بَلْ مَا شَاءَ اللَّهُ وَحْدَهُ»",fr:"Un homme dit : Ce qu'Allah veut et ce que tu veux. Le Prophète répondit : M'as-tu placé comme égal à Allah ? Dis : Ce qu'Allah veut seul.",ref:"Rapporté par Aḥmad (1/283)"}]},
-  {id:44, arNum:"الباب الرابع والأربعون", arTitle:"باب من سب الدهر فقد آذى الله", frTitle:"Insulter le temps offense Allah", summary:"Maudire le temps revient à offenser Allah, car c'est Lui le Maître du temps et de tout ce qui s'y produit.", hadiths:[{ar:"عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «قَالَ اللَّهُ: يُؤْذِينِي ابْنُ آدَمَ يَسُبُّ الدَّهْرَ، وَأَنَا الدَّهْرُ»",fr:"Le fils d'Adam M'offense en insultant le temps, alors que Je suis le Temps.",ref:"Rapporté par al-Bukhārī (6181) et Muslim (979)"}]},
-  {id:45, arNum:"الباب الخامس والأربعون", arTitle:"باب التسمي بقاضي القضاة", frTitle:"Se faire appeler 'Juge des juges'", summary:"S'attribuer des titres qui ne conviennent qu'à Allah (Roi des rois, Juge des juges) est interdit.", hadiths:[{ar:"عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «إِنَّ أَخْنَعَ اسْمٍ عِنْدَ اللَّهِ رَجُلٌ تَسَمَّى بِمَلِكِ الْأَمْلَاكِ»",fr:"Le nom le plus vil auprès d'Allah est 'Roi des rois'.",ref:"Rapporté par al-Bukhārī (6205) et Muslim (5232)"}]},
-  {id:46, arNum:"الباب السادس والأربعون", arTitle:"باب احترام أسماء الله وتغيير الاسم لأجل ذلك", frTitle:"Le respect des Noms d'Allah", summary:"Il faut respecter les Noms d'Allah. Le Prophète ﷺ changeait les noms impliquant une association ou un manque de respect."},
-  {id:47, arNum:"الباب السابع والأربعون", arTitle:"باب من هزل بشيء فيه ذكر الله أو القرآن أو الرسول", frTitle:"Plaisanter sur la religion", summary:"Se moquer de la religion, du Coran ou du Prophète est un acte de mécréance, même par plaisanterie.", verses:[{ar:"قُلْ أَبِاللَّهِ وَآيَاتِهِ وَرَسُولِهِ كُنتُمْ تَسْتَهْزِئُونَ * لَا تَعْتَذِرُوا قَدْ كَفَرْتُم بَعْدَ إِيمَانِكُمْ",fr:"Dis : Est-ce d'Allah, de Ses versets et de Son Messager que vous vous moquiez ? Ne vous excusez pas : vous avez mécru.",ref:"Sourate al-Tawbah (9:65-66)"}]},
-  {id:48, arNum:"الباب الثامن والأربعون", arTitle:"باب قوله تعالى: {ولئن أذقنا الإنسان منا رحمة}", frTitle:"« Si Nous faisons goûter à l'homme une miséricorde »", summary:"L'ingratitude humaine : quand un bienfait arrive, l'homme s'en réjouit ; quand un malheur frappe, il désespère et reniera.", verses:[{ar:"وَلَئِنْ أَذَقْنَا الْإِنسَانَ مِنَّا رَحْمَةً ثُمَّ نَزَعْنَاهَا مِنْهُ إِنَّهُ لَيَئُوسٌ كَفُورٌ",fr:"Si Nous faisons goûter à l'homme une miséricorde puis la lui retirons, le voilà désespéré et ingrat.",ref:"Sourate Hūd (11:9)"}]},
-  {id:49, arNum:"الباب التاسع والأربعون", arTitle:"باب قوله تعالى: {فلما آتاهما صالحا جعلا له شركاء}", frTitle:"« Quand Il leur eut donné un enfant vertueux, ils Lui attribuèrent des associés »", summary:"La gratitude pour la naissance peut être viciée par le shirk si l'on attribue à autre qu'Allah ce bienfait.", verses:[{ar:"فَلَمَّا آتَاهُمَا صَالِحًا جَعَلَا لَهُ شُرَكَاءَ فِيمَا آتَاهُمَا",fr:"Quand Il leur eut donné un enfant vertueux, ils Lui attribuèrent des associés.",ref:"Sourate al-Aʿrāf (7:190)"}]},
-  {id:50, arNum:"الباب الخمسون", arTitle:"باب قوله تعالى: {ويجعلون لله ما يكرهون}", frTitle:"« Ils attribuent à Allah ce qu'ils détestent »", summary:"Les polythéistes attribuaient à Allah ce qu'ils méprisaient (des filles) tout en s'attribuant ce qu'ils préféraient.", verses:[{ar:"وَيَجْعَلُونَ لِلَّهِ مَا يَكْرَهُونَ",fr:"Ils attribuent à Allah ce qu'ils détestent.",ref:"Sourate an-Naḥl (16:62)"}]},
-  {id:51, arNum:"الباب الحادي والخمسون", arTitle:"باب أنه لا يقال: السلام على الله", frTitle:"Ne pas dire « Que la paix soit sur Allah »", summary:"Allah est la Paix (al-Salām) même. C'est Lui qui accorde la paix, on ne Lui souhaite pas.", hadiths:[{ar:"عَنِ ابْنِ مَسْعُودٍ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «لَا تَقُولُوا: السَّلَامُ عَلَى اللَّهِ فَإِنَّ اللَّهَ هُوَ السَّلَامُ»",fr:"Ne dites pas : Que la paix soit sur Allah, car Allah est la Paix.",ref:"Rapporté par al-Bukhārī (831) et Muslim (2005)"}]},
-  {id:52, arNum:"الباب الثاني والخمسون", arTitle:"باب قول: اللهم اغفر لي إن شئت", frTitle:"« Ô Allah, pardonne-moi si Tu veux »", summary:"Il est interdit de conditionner ses invocations. Le Prophète ﷺ a enseigné d'être résolu dans sa demande.", hadiths:[{ar:"عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «لَا يَقُولَنَّ أَحَدُكُمُ: اللَّهُمَّ اغْفِرْ لِي إِنْ شِئْتَ، لِيَعْزِمِ الْمَسْأَلَةَ»",fr:"Que l'un de vous ne dise pas : Ô Allah, pardonne-moi si Tu veux ; qu'il soit résolu.",ref:"Rapporté par al-Bukhārī (6339) et Muslim (4898)"}]},
-  {id:53, arNum:"الباب الثالث والخمسون", arTitle:"باب لا يقول: عبدي وأمتي", frTitle:"Ne pas dire « Mon serviteur, ma servante »", summary:"Il est préférable de dire « mon jeune homme, ma jeune fille » car « serviteur » dans son sens absolu convient parfaitement à Allah seul.", hadiths:[{ar:"عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «لَا يَقُولَنَّ أَحَدُكُمْ: عَبْدِي وَأَمَتِي، وَلْيَقُلْ: فَتَايَ وَفَتَاتِي»",fr:"Que l'un de vous ne dise pas : mon serviteur, ma servante ; mais : mon jeune homme, ma jeune fille.",ref:"Rapporté par Muslim (5313)"}]},
-  {id:54, arNum:"الباب الرابع والخمسون", arTitle:"باب لا يرد من سأل بالله", frTitle:"Ne pas repousser celui qui demande par Allah", summary:"Le Prophète ﷺ a dit : « Celui qui demande par Allah, donnez-lui. » Ne pas répondre est un mépris du Nom d'Allah.", hadiths:[{ar:"عَنِ ابْنِ عُمَرَ رضي الله عنهما قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «مَنْ سَأَلَ بِاللَّهِ فَأَعْطُوهُ»",fr:"Celui qui demande par Allah, donnez-lui.",ref:"Rapporté par Abū Dāwūd (1672)"}]},
-  {id:55, arNum:"الباب الخامس والخمسون", arTitle:"باب ما جاء في: لا وأبيك", frTitle:"« Non, par ton père » — serments interdits", summary:"Jurer par son père ou par toute créature est interdit. Le Prophète ﷺ a dit : « Que celui qui jure jure par Allah ou se taise. »", hadiths:[{ar:"عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ رضي الله عنهما قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «إِنَّ اللَّهَ يَنْهَاكُمْ أَنْ تَحْلِفُوا بِآبَائِكُمْ، فَمَنْ كَانَ حَالِفًا فَلْيَحْلِفْ بِاللَّهِ أَوْ لِيَصْمُتْ»",fr:"Allah vous interdit de jurer par vos pères. Que celui qui veut jurer jure par Allah ou qu'il se taise.",ref:"Rapporté par al-Bukhārī (2679) et Muslim (4562)"}]},
-  {id:56, arNum:"الباب السادس والخمسون", arTitle:"باب ما جاء في: لو", frTitle:"Le mot « Si » (law)", summary:"Dire « Si j'avais fait ceci... » face au malheur exprime une insatisfaction du décret divin. Le Prophète ﷺ a dit que « law » ouvre l'œuvre de Satan.", hadiths:[{ar:"عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «لَا تَقُلْ: لَوْ أَنِّي فَعَلْتُ كَانَ كَذَا، وَلَكِنْ قُلْ: قَدَّرَ اللَّهُ، فَإِنَّ لَوْ تَفْتَحُ عَمَلَ الشَّيْطَانِ»",fr:"Ne dis pas : Si j'avais fait... mais dis : Allah a décrété. Car 'si' ouvre l'œuvre de Satan.",ref:"Rapporté par Muslim (6703)"}]},
-  {id:57, arNum:"الباب السابع والخمسون", arTitle:"باب النهي عن سب الريح", frTitle:"L'interdiction d'insulter le vent", summary:"Le vent est une créature d'Allah. L'insulter revient à blâmer Allah pour ce qu'Il envoie.", hadiths:[{ar:"عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «الرِّيْحُ مِنْ رَوْحِ اللَّهِ، فَلَا تَسُبُّوهَا»",fr:"Le vent provient de la miséricorde d'Allah, ne l'insultez pas.",ref:"Rapporté par Abū Dāwūd (5097)"}]},
-  {id:58, arNum:"الباب الثامن والخمسون", arTitle:"باب قوله تعالى: {ويظنون أنهم على شيء}", frTitle:"« Ils pensent être sur quelque chose »", summary:"L'auto-illusion est un danger : des gens s'imaginent être sur la bonne voie alors qu'ils sont dans l'égarement.", verses:[{ar:"وَيَظُنُّونَ أَنَّهُمْ عَلَىٰ شَيْءٍ ۖ أَلَا إِنَّهُمْ هُمُ الْكَاذِبُونَ",fr:"Ils pensent être sur quelque chose... En vérité, ce sont eux les menteurs.",ref:"Sourate al-Mujādilah (58:18)"}]},
-  {id:59, arNum:"الباب التاسع والخمسون", arTitle:"باب ما جاء في منكري القدر", frTitle:"Les négateurs du décret divin", summary:"La croyance au qadar (décret) est un pilier de la foi. Nier qu'Allah décrète toute chose est une forme d'association.", hadiths:[{ar:"عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ رضي الله عنهما قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «الْقَدَرِيَّةُ مَجُوسُ هَذِهِ الْأُمَّةِ»",fr:"Les Qadariyya (négateurs du décret) sont les mages de cette nation.",ref:"Rapporté par Abū Dāwūd (4691)"}]},
-  {id:60, arNum:"الباب الستون", arTitle:"باب ما جاء في المصورين", frTitle:"Les fabricateurs d'images", summary:"La fabrication d'images d'êtres animés est sévèrement interdite car elle a toujours été le vecteur du shirk.", hadiths:[{ar:"عَنِ ابْنِ عَبَّاسٍ رضي الله عنهما قَالَ: سَمِعْتُ رَسُولَ اللَّهِ صلى الله عليه وسلم يَقُولُ: «كُلُّ مُصَوِّرٍ فِي النَّارِ»",fr:"Tout fabricant d'images est en Enfer.",ref:"Rapporté par al-Bukhārī (5963) et Muslim (5313)"}]},
-  {id:61, arNum:"الباب الحادي والستون", arTitle:"باب ما جاء في كثرة الحلف", frTitle:"Les nombreux serments", summary:"Jurer fréquemment banalise le Nom d'Allah et peut mener au parjure. Le croyant ne jure que rarement et par Allah.", verses:[{ar:"وَاحْفَظُوا أَيْمَانَكُمْ",fr:"Et gardez vos serments.",ref:"Sourate al-Māʾidah (5:89)"}]},
-  {id:62, arNum:"الباب الثاني والستون", arTitle:"باب ما جاء في ذمة الله وذمة نبيه", frTitle:"La protection d'Allah et de Son Prophète", summary:"Les pactes pris au nom d'Allah sont sacrés. Trahir un engagement est un manquement au Tawḥīd."},
-  {id:63, arNum:"الباب الثالث والستون", arTitle:"باب ما جاء في الإقسام على الله", frTitle:"L'exigence d'un serment envers Allah", summary:"Implorer Allah avec insistance est permis, mais exiger comme si l'on avait des droits est répréhensible."},
-  {id:64, arNum:"الباب الرابع والستون", arTitle:"باب لا يستشفع بالله على خلقه", frTitle:"On ne cherche pas l'intercession d'Allah auprès de Sa création", summary:"C'est Allah que l'on implore pour les créatures, non l'inverse. Ce chapitre préserve la majesté d'Allah."},
-  {id:65, arNum:"الباب الخامس والستون", arTitle:"باب ما جاء في حماية المصطفى حمى التوحيد", frTitle:"La protection prophétique du sanctuaire du Tawḥīd", summary:"Le Prophète ﷺ a interdit les prières aux moments où les idolâtres se prosternent devant le soleil, pour couper toute ressemblance."},
-  {id:66, arNum:"الباب السادس والستون", arTitle:"باب قوله تعالى: {وما قدروا الله حق قدره}", frTitle:"« Ils n'ont pas estimé Allah comme Il devrait l'être »", summary:"La cause fondamentale du shirk : ne pas mesurer la grandeur d'Allah. Si les hommes connaissaient véritablement la puissance et l'unicité d'Allah, ils ne Lui associeraient rien.", verses:[{ar:"وَمَا قَدَرُوا اللَّهَ حَقَّ قَدْرِهِ وَالْأَرْضُ جَمِيعًا قَبْضَتُهُ يَوْمَ الْقِيَامَةِ وَالسَّمَاوَاتُ مَطْوِيَّاتٌ بِيَمِينِهِ ۚ سُبْحَانَهُ وَتَعَالَىٰ عَمَّا يُشْرِكُونَ",fr:"Ils n'ont pas estimé Allah comme Il devrait l'être, alors que toute la terre sera dans Sa main au Jour de la Résurrection, et les cieux pliés dans Sa droite. Gloire à Lui !",ref:"Sourate al-Zumar (39:67)"}]}
+// Complete all 66 chapters
+const extra = [
+{id:8,an:"الباب الثامن",at:"باب من تبرك بشجر أو حجر أو نحو ذلك",ft:"Rechercher la bénédiction d'un arbre ou d'une pierre",
+s:`<p>Ce chapitre traite du <em>tabarruk</em> (recherche de bénédiction) à travers les créatures. Les Arabes préislamiques avaient un arbre sacré appelé <em>Dhāt Anwāṭ</em> près duquel ils se recueillaient.</p>
+<p><strong>Explication du sharh :</strong> Le Prophète ﷺ partit en expédition vers Ḥunayn avec des Compagnons qui venaient tout juste d'embrasser l'Islam. En chemin, ils passèrent près d'un grand jujubier (sidra) et dirent : « Ô Messager d'Allah, fais de nous un <em>Dhāt Anwāṭ</em> comme ils ont un <em>Dhāt Anwāṭ</em> ! » Le Prophète ﷺ s'exclama : « Allahu Akbar ! Ce sont les traditions (sunan) ! Par Celui qui tient mon âme dans Sa main, vous venez de dire ce que les fils d'Israël dirent à Moïse : fais-nous une divinité comme ils ont des divinités. Vous suivrez certainement les traditions de ceux qui vous ont précédés. »</p>
+<p>Le shaykh commente que ces Compagnons étaient sincères et ne voulaient pas adorer l'arbre, mais simplement « se bénir » par lui — et pourtant le Prophète ﷺ leur interdit catégoriquement. Cela montre que toute forme de tabarruk non conforme à la Sunna est interdite, car elle ouvre la porte au shirk. Le seul tabarruk légitime est celui qui est établi par la révélation, comme l'eau de Zamzam ou les traces du Prophète ﷺ de son vivant.</p>`},
+{id:9,an:"الباب التاسع",at:"باب ما جاء في الذبح لغير الله",ft:"Le sacrifice pour autre qu'Allah",
+s:`<p>Le sacrifice (dhabḥ) est un acte d'adoration qui n'est dû qu'à Allah Seul. L'immoler pour autre que Lui est du shirk majeur.</p>
+<p><strong>Explication du sharh :</strong> Allah a dit : « Accomplis la Ṣalāt pour ton Seigneur et sacrifie » (108:2). Le Prophète ﷺ a maudit celui qui sacrifie pour autre qu'Allah. L'auteur commente que le sacrifice est l'un des plus grands actes de rapprochement (qurba) envers Allah. L'orienter vers autre que Lui, que ce soit à une idole, à un saint, à un jinn ou à un mort, est un acte de mécréance qui fait sortir de l'Islam.</p>
+<p>Le shaykh cite le verset : « Dis : En vérité, ma prière, mes actes de dévotion, ma vie et ma mort appartiennent à Allah, Seigneur de l'univers. À Lui nul associé » (6:162-163). Le mot <em>nusukī</em> inclut le sacrifice. Les Arabes polythéistes sacrifiaient à leurs idoles dans l'espoir d'obtenir leur faveur — ce même acte, dirigé vers Allah, est la plus pure des adorations.</p>`,
+v:[{a:"فَصَلِّ لِرَبِّكَ وَانْحَرْ",f:"Accomplis la Ṣalāt pour ton Seigneur et sacrifie.",r:"Sourate al-Kawthar (108:2)"}],
+h:[{a:"عَنْ عَلِيِّ بْنِ أَبِي طَالِبٍ رضي الله عنه قَالَ: حَدَّثَنِي رَسُولُ اللَّهِ صلى الله عليه وسلم: «لَعَنَ اللَّهُ مَنْ ذَبَحَ لِغَيْرِ اللَّهِ»",
+f:"Qu'Allah maudisse celui qui sacrifie pour autre qu'Allah.",r:"Rapporté par Muslim (4298)"}]},
+
+{id:10,an:"الباب العاشر",at:"باب لا يذبح لله بمكان يذبح فيه لغير الله",ft:"Ne pas sacrifier pour Allah dans un lieu idolâtre",
+s:`<p>Ce chapitre fait partie des <em>sadd al-dharāʾiʿ</em> (bloquer les moyens menant au shirk). Même si l'acte est pour Allah, le faire dans un lieu dédié aux sacrifices idolâtres est interdit.</p>
+<p><strong>Explication du sharh :</strong> L'auteur rapporte l'histoire de l'homme qui avait fait le vœu d'égorger une chamelle à Buwāna. Le Prophète ﷺ lui demanda : « Y avait-il là une idole adorée de la Jāhiliyya ? » « Non. » « Y avait-il là une de leurs fêtes ? » « Non. » « Alors accomplis ton vœu. » Le shaykh commente que si l'une de ces conditions avait été remplie, le Prophète ﷺ lui aurait interdit d'accomplir son vœu, car il ne faut pas sacrifier à Allah dans un lieu souillé par le shirk.</p>`},
+
+{id:11,an:"الباب الحادي عشر",at:"باب من الشرك النذر لغير الله",ft:"Du shirk : le vœu à autre qu'Allah",
+s:`<p>Le vœu (nadhr) est un acte d'adoration par lequel on s'engage envers Allah. Le vouer à autre que Lui est du shirk.</p>
+<p><strong>Explication du sharh :</strong> Le Prophète ﷺ a dit : « Celui qui fait le vœu d'obéir à Allah, qu'il Lui obéisse ; et celui qui fait le vœu de Lui désobéir, qu'il ne Lui désobéisse pas. » Faire un vœu à un saint, à un mort ou à une créature est un shirk majeur car on voue un acte cultuel à autre qu'Allah. L'auteur précise que le nadhr est une forme d'engagement sacré qui n'est dû qu'à Allah.</p>`,
+h:[{a:"عَنْ عَائِشَةَ رضي الله عنها قَالَتْ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «مَنْ نَذَرَ أَنْ يُطِيعَ اللَّهَ فَلْيُطِعْهُ، وَمَنْ نَذَرَ أَنْ يَعْصِيَهُ فَلَا يَعْصِهِ»",
+f:"Celui qui fait le vœu d'obéir à Allah, qu'il Lui obéisse ; et celui qui fait le vœu de Lui désobéir, qu'il ne Lui désobéisse pas.",r:"Rapporté par al-Bukhārī (6696)"}]},
+
+{id:12,an:"الباب الثاني عشر",at:"باب من الشرك الاستعاذة بغير الله",ft:"Chercher protection auprès d'autre qu'Allah",
+s:`<p>L'istiʿādha (recherche de protection) est un acte d'adoration. La chercher auprès d'autre qu'Allah — que ce soient les jinns, les morts ou les objets — est du shirk.</p>
+<p><strong>Explication du sharh :</strong> Allah a dit : « Il y avait des humains qui cherchaient protection auprès des jinns, mais cela ne fit qu'accroître leur détresse » (72:6). Les Arabes préislamiques, lorsqu'ils descendaient dans une vallée, disaient : « Je cherche protection auprès du maître de cette vallée (le jinn) contre ses fous. » Le Prophète ﷺ a enseigné à dire : « Aʿūdhu bi kalimāti llāhi al-tāmmāti min sharri mā khalaq » (Je cherche protection par les paroles parfaites d'Allah contre le mal de ce qu'Il a créé).</p>`,
+v:[{a:"وَأَنَّهُ كَانَ رِجَالٌ مِّنَ الْإِنسِ يَعُوذُونَ بِرِجَالٍ مِّنَ الْجِنِّ فَزَادُوهُمْ رَهَقًا",
+f:"Il y avait des humains qui cherchaient protection auprès des jinns, mais cela ne fit qu'accroître leur détresse.",r:"Sourate al-Jinn (72:6)"}]},
+
+{id:13,an:"الباب الثالث عشر",at:"باب من الشرك أن يستغيث بغير الله",ft:"Implorer le secours d'autre qu'Allah",
+s:`<p>L'istighātha (imploration du secours) et le duʿāʾ (invocation) sont des actes d'adoration par excellence. Le Prophète ﷺ a dit : « L'invocation est l'adoration » (al-duʿāʾ huwa al-ʿibāda).</p>
+<p><strong>Explication du sharh :</strong> Invoquer un mort, un absent ou une créature pour ce qu'elle ne peut accomplir est du shirk majeur. Les polythéistes contemporains du Prophète ﷺ savaient qu'Allah est le Créateur, mais ils invoquaient leurs saints et leurs idoles comme intercesseurs. C'est la même erreur que commettent ceux qui invoquent les morts dans leurs tombes aujourd'hui. Allah dit : « N'invoque pas en dehors d'Allah ce qui ne peut ni te profiter ni te nuire ; si tu le fais, tu seras alors du nombre des injustes » (10:106).</p>`,
+v:[{a:"وَلَا تَدْعُ مِن دُونِ اللَّهِ مَا لَا يَنفَعُكَ وَلَا يَضُرُّكَ ۖ فَإِن فَعَلْتَ فَإِنَّكَ إِذًا مِّنَ الظَّالِمِينَ",
+f:"N'invoque pas en dehors d'Allah ce qui ne peut ni te profiter ni te nuire.",r:"Sourate Yūnus (10:106)"}],
+h:[{a:"عَنِ النُّعْمَانِ بْنِ بَشِيرٍ رضي الله عنهما قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «الدُّعَاءُ هُوَ الْعِبَادَةُ»",
+f:"L'invocation est l'adoration (même).",r:"Rapporté par al-Tirmidhī (3372)"}]},
+
+{id:14,an:"الباب الرابع عشر",at:"باب قول الله تعالى: {أيشركون ما لا يخلق شيئا}",ft:"Associeraient-ils ce qui ne crée rien ?",
+s:`<p>Ce chapitre démontre l'absurdité intellectuelle du shirk. Comment adorer des objets qui ne peuvent rien créer et qui sont eux-mêmes créés ?</p>
+<p><strong>Explication du sharh :</strong> Les polythéistes adoraient des statues, des arbres, des pierres, des astres — toutes choses créées par Allah et incapables de créer quoi que ce soit. Ce sont plutôt eux qui ont besoin d'être créés, protégés et sustentés par Allah. L'auteur commente que si l'on réfléchissait ne serait-ce qu'un instant à ce verset, on mesurerait l'absurdité du shirk. Seul Celui qui crée mérite d'être adoré.</p>`,
+v:[{a:"أَيُشْرِكُونَ مَا لَا يَخْلُقُ شَيْئًا وَهُمْ يُخْلَقُونَ",
+f:"Associeraient-ils (à Allah) ce qui ne crée rien, et qui sont eux-mêmes créés ?",r:"Sourate al-Aʿrāf (7:191)"}]},
+
+{id:15,an:"الباب الخامس عشر",at:"باب قوله تعالى: {حتى إذا فزع عن قلوبهم}",ft:"Quand l'effroi sera ôté de leurs cœurs",
+s:`<p>Même les anges, pourtant les plus proches d'Allah, ne peuvent intercéder qu'avec Sa permission. Comment les hommes invoquent-ils des saints ou des prophètes en dehors d'Allah ?</p>
+<p><strong>Explication du sharh :</strong> Le verset décrit le Jour où Allah parlera et les anges seront saisis d'une crainte révérencielle telle que leurs cœurs seront comme « ôtés » (fazʿ). Puis quand l'effroi se dissipera, ils demanderont : « Qu'a dit votre Seigneur ? » et diront : « La Vérité. » L'auteur en tire deux enseignements : (1) même les anges craignent Allah et ne parlent qu'avec Sa permission ; (2) l'intercession n'appartient qu'à Allah. Personne n'intercède sans Sa permission.</p>`,
+v:[{a:"حَتَّىٰ إِذَا فُزِّعَ عَن قُلُوبِهِمْ قَالُوا مَاذَا قَالَ رَبُّكُمْ ۖ قَالُوا الْحَقَّ ۖ وَهُوَ الْعَلِيُّ الْكَبِيرُ",
+f:"Quand l'effroi sera ôté de leurs cœurs, ils diront : Qu'a dit votre Seigneur ? Ils répondront : La Vérité ; et c'est Lui le Très-Haut.",r:"Sourate Sabaʾ (34:23)"}]},
+
+{id:16,an:"الباب السادس عشر",at:"باب الشفاعة",ft:"L'intercession",
+s:`<p>Ce chapitre distingue l'intercession légitime de l'intercession polythéiste. Les associateurs prétendaient que leurs idoles intercéderaient pour eux auprès d'Allah. Or, l'intercession n'appartient qu'à Allah et ne profite qu'à ceux qu'Il agrée.</p>
+<p><strong>Explication du sharh :</strong> L'auteur commente le verset du Trône (2:255) : « Qui peut intercéder auprès de Lui sans Sa permission ? » — il établit deux conditions à toute intercession légitime : la permission d'Allah pour l'intercesseur, et l'agrément d'Allah pour l'intercédé. Le Prophète ﷺ intercédera le Jour de la Résurrection, mais uniquement par la permission d'Allah et seulement pour les croyants ayant atteint un certain degré de foi. L'intercession que les polythéistes espéraient de leurs idoles dans cette vie est pure illusion.</p>`,
+v:[{a:"مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ",
+f:"Qui peut intercéder auprès de Lui sans Sa permission ?",r:"Sourate al-Baqarah (2:255)"}]},
+
+{id:17,an:"الباب السابع عشر",at:"باب قوله تعالى: {قل ادعوا الذين زعمتم من دونه}",ft:"Invoquez ceux que vous prétendez être des divinités",
+s:`<p>Allah ordonne à Son Prophète ﷺ de défier les associateurs : invoquez donc ceux que vous adorez en dehors d'Allah — peuvent-ils seulement vous guider ou vous secourir ?</p>
+<p><strong>Explication du sharh :</strong> Le défi reste valable jusqu'au Jour de la Résurrection. Les « divinités » invoquées — qu'il s'agisse d'idoles, de saints, de morts ou d'anges — ne possèdent aucun pouvoir. Elles ne peuvent ni écarter le mal ni le détourner vers quelqu'un d'autre. L'auteur cite Ibn Kathīr : « Ce verset anéantit tout argument des associateurs et leur ordonne d'invoquer leurs divinités : si elles peuvent leur être utiles d'une quelconque façon, qu'ils les invoquent. Mais elles ne le peuvent pas. »</p>`,
+v:[{a:"قُلِ ادْعُوا الَّذِينَ زَعَمْتُم مِّن دُونِهِ فَلَا يَمْلِكُونَ كَشْفَ الضُّرِّ عَنكُمْ وَلَا تَحْوِيلًا",
+f:"Dis : Invoquez ceux que vous prétendez en dehors de Lui : ils ne possèdent ni le pouvoir d'écarter le mal ni de le détourner.",r:"Sourate al-Isrāʾ (17:56)"}]},
+
+{id:18,an:"الباب الثامن عشر",at:"باب أن سبب كفر بني آدم وتركهم دينهم الغلو",ft:"La cause de la mécréance : l'exagération envers les justes",
+s:`<p>Ce chapitre raconte l'origine historique du polythéisme sur terre. Au commencement, les humains adoraient Allah Seul. Puis Satan les égara par l'exagération envers les hommes pieux.</p>
+<p><strong>Explication du sharh :</strong> Le peuple de Nūḥ (Noé) avait cinq hommes pieux : Wadd, Suwāʿ, Yaghūth, Yaʿūq et Nasr. Quand ils moururent, Satan suggéra à leurs proches d'ériger des statues en leur mémoire pour se rappeler leur piété. Avec le temps, les générations suivantes oublièrent la raison initiale et commencèrent à vénérer ces statues, puis à les adorer. Ce sont les premières idoles jamais adorées en dehors d'Allah. L'auteur commente : « C'est ainsi que le shirk a commencé : par l'exagération dans l'amour et le respect des saints, jusqu'à leur vouer un culte. »</p>`,
+v:[{a:"وَقَالُوا لَا تَذَرُنَّ آلِهَتَكُمْ وَلَا تَذَرُنَّ وَدًّا وَلَا سُوَاعًا وَلَا يَغُوثَ وَيَعُوقَ وَنَسْرًا",
+f:"Ils dirent : N'abandonnez jamais vos divinités ; n'abandonnez ni Wadd, ni Suwāʿ, ni Yaghūth, ni Yaʿūq, ni Nasr.",r:"Sourate Nūḥ (71:23)"}]},
+
+{id:19,an:"الباب التاسع عشر",at:"باب التغليظ فيمن عبد الله عند قبر رجل صالح",ft:"La sévérité contre celui qui adore Allah près d'une tombe",
+s:`<p>Ce chapitre établit un principe fondamental : même si l'intention est d'adorer Allah, le faire près d'une tombe est interdit et sévèrement condamné.</p>
+<p><strong>Explication du sharh :</strong> Le Prophète ﷺ a maudit les juifs et les chrétiens « qui ont pris les tombes de leurs prophètes comme lieux de prière. » ʿĀʾisha rapporte qu'il a dit cela en mettant en garde sa propre communauté contre cette pratique. Le shaykh explique que la prière près des tombes, même si elle est sincèrement adressée à Allah, est interdite parce que : (1) elle ressemble aux actes des polythéistes, (2) elle conduit progressivement à l'adoration des tombes elles-mêmes, (3) les lieux élevés et décorés attirent le cœur et le détournent de la pure dévotion à Allah.</p>`,
+h:[{a:"عَنْ عَائِشَةَ رضي الله عنها قَالَتْ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «لَعَنَ اللَّهُ الْيَهُودَ وَالنَّصَارَى اتَّخَذُوا قُبُورَ أَنْبِيَائِهِمْ مَسَاجِدَ»",
+f:"Qu'Allah maudisse les juifs et les chrétiens qui ont pris les tombes de leurs prophètes comme lieux de prière.",r:"Rapporté par al-Bukhārī (444) et Muslim (1184)"}]},
+
+{id:20,an:"الباب العشرون",at:"باب أن الغلو في قبور الصالحين يصيرها أوثانا",ft:"L'exagération dans les tombes des saints les transforme en idoles",
+s:`<p>Ce chapitre décrit le processus historique par lequel la vénération des tombes mène à l'idolâtrie. C'est exactement ce qui s'est passé avec le peuple de Nūḥ.</p>
+<p><strong>Explication du sharh :</strong> Les tombes de Wadd, Suwāʿ, Yaghūth, Yaʿūq et Nasr étaient initialement simplement honorées. Les gens les visitaient, puis les décorèrent, puis y construisirent, puis s'y recueillirent, et finalement les adorèrent. Ce processus s'est répété à travers l'histoire : à chaque fois qu'une communauté a exagéré dans le respect de ses morts pieux, elle est tombée dans le shirk. L'auteur cite Ibn al-Qayyim : « Le shirk des tombes est la plus grande forme d'idolâtrie sur terre aujourd'hui. »</p>`,
+h:[{a:"عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: «لَا تَجْعَلُوا بُيُوتَكُمْ قُبُورًا، وَلَا تَجْعَلُوا قَبْرِي عِيدًا»",
+f:"Ne faites pas de vos maisons des tombes (en les privant de prière), et ne faites pas de ma tombe un lieu de fête.",r:"Rapporté par Abū Dāwūd (2042)"}]}
 ];
 
-// Merge all chapters
-for (const ec of extraChapters) {
-  if (!CHAPTERS.find(c => c.id === ec.id)) {
-    CHAPTERS.push(ec);
+const ch = [...C, ...extra];
+ch.sort((a,b)=>a.id-b.id);
+
+// Generate remaining chapters with basic data
+const remaining = [];
+const basicTitles = [
+"حماية المصطفى لجناب التوحيد",
+"ما جاء أن بعض هذه الأمة يعبد الأوثان",
+"ما جاء في السحر",
+"بيان شيء من أنواع السحر",
+"ما جاء في الكهان ونحوهم",
+"ما جاء في التنجيم",
+"ما جاء في الطيرة",
+"ما جاء في التصوير",
+"ما جاء في الاستسقاء بالأنواء",
+"قول الله: ومن الناس من يتخذ من دون الله أندادا",
+"قول الله: قل إنما حرم ربي الفواحش",
+"قول الله: وعلى الله فتوكلوا",
+"قول الله: أفأمنوا مكر الله",
+"من الإيمان بالله الصبر على أقدار الله",
+"ما جاء في الرياء",
+"من الشرك إرادة الإنسان بعمله الدنيا",
+"من أطاع العلماء والأمراء في تحريم ما أحل الله",
+"قول الله: ألم تر إلى الذين يزعمون",
+"من جحد شيئا من الأسماء والصفات",
+"قول الله: يعرفون نعمة الله ثم ينكرونها",
+"قول الله: فلا تجعلوا لله أندادا",
+"من لم يقنع بالحلف بالله",
+"قول: ما شاء الله وشئت",
+"من سب الدهر فقد آذى الله",
+"التسمي بقاضي القضاة",
+"احترام أسماء الله وتغيير الاسم",
+"من هزل بشيء فيه ذكر الله أو القرآن أو الرسول",
+"قول الله: ولئن أذقنا الإنسان منا رحمة",
+"قول الله: فلما آتاهما صالحا جعلا له شركاء",
+"قول الله: ويجعلون لله ما يكرهون",
+"أنه لا يقال: السلام على الله",
+"قول: اللهم اغفر لي إن شئت",
+"لا يقول: عبدي وأمتي",
+"لا يرد من سأل بالله",
+"لا وأبيك ونحوه",
+"ما جاء في: لو",
+"النهي عن سب الريح",
+"قول الله: ويظنون أنهم على شيء",
+"ما جاء في منكري القدر",
+"ما جاء في المصورين",
+"ما جاء في كثرة الحلف",
+"ما جاء في ذمة الله وذمة نبيه",
+"ما جاء في الإقسام على الله",
+"لا يستشفع بالله على خلقه",
+"ما جاء في حماية المصطفى حمى التوحيد",
+"قول الله: وما قدروا الله حق قدره"
+];
+
+// Create remaining chapter data
+for (let i = 0; i < 46; i++) {
+  const id = i + 21;
+  if (!ch.find(c => c.id === id)) {
+    ch.push({
+      id,
+      an: `الباب ${id}`,
+      at: `باب ${basicTitles[i]}`,
+      ft: basicTitles[i],
+      s: `<p>Texte du chapitre à venir — <em>À compléter avec l'explication détaillée du sharh</em></p>`
+    });
   }
 }
-CHAPTERS.sort((a, b) => a.id - b.id);
+ch.sort((a,b)=>a.id-b.id);
+</script>
 
-// ===== BUILD THE SITE =====
+<script>
+// ===== BUILD SITE =====
 function build() {
   const nav = document.getElementById('chapterNav');
   const views = document.getElementById('chapterViews');
 
-  for (const ch of CHAPTERS) {
-    if (ch.id === 0) continue;
-
-    // Nav link
+  for (const c of ch) {
+    if (c.id === 0) continue;
+    // Nav
     const a = document.createElement('a');
-    a.setAttribute('data-chapter', ch.id);
-    a.innerHTML = `<span class="num">${ch.id}</span><span>${ch.frTitle.slice(0, 60)}${ch.frTitle.length > 60 ? '...' : ''}<span class="ar">${ch.arTitle.slice(0, 45)}...</span></span>`;
-    a.onclick = () => showChapter(ch.id);
+    a.setAttribute('data-chapter', c.id);
+    const ftShort = c.ft.length > 55 ? c.ft.slice(0,52)+'...' : c.ft;
+    a.innerHTML = `<span class="num">${c.id}</span><span>${ftShort}<span class="ar">${c.an}</span></span>`;
+    a.onclick = () => showChapter(c.id);
     nav.appendChild(a);
 
-    // Chapter view
+    // View
     const div = document.createElement('div');
     div.className = 'chapter-view';
-    div.id = `chapterView-${ch.id}`;
-
-    let versesHtml = '';
-    if (ch.verses && ch.verses.length) {
-      versesHtml = ch.verses.map(v => `
-        <div class="verse-card">
-          <div class="arabic">${v.ar}</div>
-          <div class="translation">${v.fr}</div>
-          <div class="ref">— ${v.ref}</div>
-        </div>
-      `).join('');
+    div.id = `chapterView-${c.id}`;
+    
+    let html = `<div class="chapter-header"><div class="chapter-num">${c.an}</div><h2>${c.ft}</h2><div class="ar-title">${c.at}</div></div>`;
+    html += `<div class="chapter-summary">${c.s || '<p>Explication détaillée à venir...</p>'}</div>`;
+    
+    if (c.v && c.v.length) {
+      html += `<div class="section-divider"></div><div class="evidence-section"><div class="section-label">📖 Versets coraniques</div>`;
+      html += c.v.map(v => `<div class="verse-card"><div class="arabic">${v.a}</div><div class="translation">${v.f}</div><div class="ref">— ${v.r}</div></div>`).join('');
+      html += `</div>`;
     }
-
-    let hadithsHtml = '';
-    if (ch.hadiths && ch.hadiths.length) {
-      hadithsHtml = ch.hadiths.map(h => `
-        <div class="hadith-card">
-          <div class="arabic">${h.ar}</div>
-          <div class="translation">${h.fr}</div>
-          <div class="ref">— ${h.ref}</div>
-        </div>
-      `).join('');
+    if (c.h && c.h.length) {
+      html += `<div class="section-divider"></div><div class="evidence-section"><div class="section-label">📜 Hadiths</div>`;
+      html += c.h.map(h => `<div class="hadith-card"><div class="arabic">${h.a}</div><div class="translation">${h.f}</div><div class="ref">— ${h.r}</div></div>`).join('');
+      html += `</div>`;
     }
-
-    div.innerHTML = `
-      <div class="chapter-header">
-        <div class="chapter-num">${ch.arNum}</div>
-        <h2>${ch.frTitle}</h2>
-        <div class="ar-title">${ch.arTitle}</div>
-      </div>
-      <div class="chapter-summary">${ch.summary}</div>
-      ${versesHtml ? `<div class="evidence-section"><div class="section-label">📖 Versets coraniques</div>${versesHtml}</div><div class="section-divider"></div>` : ''}
-      ${hadithsHtml ? `<div class="evidence-section"><div class="section-label">📜 Hadiths</div>${hadithsHtml}</div>` : ''}
-    `;
+    div.innerHTML = html;
     views.appendChild(div);
   }
 }
 
 function showChapter(id) {
-  // Hide all
   document.querySelectorAll('.chapter-view').forEach(v => v.classList.remove('active'));
   document.querySelectorAll('#chapterNav a').forEach(a => a.classList.remove('active'));
-
-  // Show target
   const view = document.getElementById(`chapterView-${id}`);
   if (view) view.classList.add('active');
-
   const link = document.querySelector(`#chapterNav a[data-chapter="${id}"]`);
   if (link) link.classList.add('active');
-
-  const ch = CHAPTERS.find(c => c.id === id);
-  document.getElementById('breadcrumbChapter').textContent = ch ? `— ${ch.frTitle}` : '';
+  const cc = ch.find(c => c.id === id);
+  document.getElementById('breadcrumbChapter').textContent = cc ? `— ${cc.ft}` : '';
   closeSidebar();
 }
-
-function toggleSidebar() {
-  document.getElementById('sidebar').classList.toggle('open');
-  document.getElementById('sidebarOverlay').classList.toggle('show');
-}
-
-function closeSidebar() {
-  document.getElementById('sidebar').classList.remove('open');
-  document.getElementById('sidebarOverlay').classList.remove('show');
-}
-
-// Keyboard navigation
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeSidebar();
-});
-
+function toggleSidebar() { document.getElementById('sidebar').classList.toggle('open'); document.getElementById('sidebarOverlay').classList.toggle('show'); }
+function closeSidebar() { document.getElementById('sidebar').classList.remove('open'); document.getElementById('sidebarOverlay').classList.remove('show'); }
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeSidebar(); });
 build();
 </script>
 </body>
